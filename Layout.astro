@@ -1,0 +1,131 @@
+---
+const { title = "Mi Sitio Web" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title}</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f1cbaca1e1.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Barra superior -->
+  <div class="h-10 border-b border-neutral-300 dark:border-neutral-800 bg-neutral-300/25 dark:bg-neutral-800/25 flex items-center justify-between px-6">
+    <a href="https://discord.gg/QMY4r4sSnB" target="_blank" class="flex items-center text-xs border border-neutral-300 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-white px-3 py-1 rounded-full hover:bg-indigo-500 transition">
+      <i class="fa-brands fa-discord mr-2"></i> Únete a nuestro Discord
+    </a>
+  </div>
+
+<!-- Navegación -->
+<header class="h-20 border-b dark:border-b-neutral-800 border-b-neutral-300 flex items-center px-4">
+  <div class="flex items-center gap-4">
+    <img src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=67a7d778&is=67a685f8&hm=dc64a830b2c44f749108991256d4a75de1cc1f8b659a17c232a463aeaafb737a&" 
+    
+      alt="OtakuPlayHub Logo" class="w-12 h-12 rounded-full">
+
+      <nav class="md:ml-6 lt-md:border-b border-neutral-300 dark:border-neutral-900 lt-md:absolute left-0 lt-md:top-20 w-full bg-neutral-50/90 dark:bg-neutral-900/90 backdrop-blur-md z-10 lt-md:shadow lt-md:hidden">
+        <ul class="flex items-center gap-2 lt-md:flex-col lt-md:p-4">
+          <li class="lt-md:w-full flex-center">
+            <a href="/" class="font-bold px-3 py-1 rounded-xl lt-md:w-full md:text-sm border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-blue-900 text-center">Inicio</a>
+          </li>
+
+          <li class="lt-md:w-full flex-center">
+            <a href="/Anime/" class="font-bold px-3 py-1 rounded-xl lt-md:w-full md:text-sm border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-blue-900 text-center">Anime</a>
+          </li>
+
+          <li class="lt-md:w-full flex-center">
+            <a href="/Juegos/" class="font-bold px-3 py-1 rounded-xl lt-md:w-full md:text-sm border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-blue-900 text-center"> Juegos</a>
+          </li>
+          
+          <li class="lt-md:w-full flex-center">
+            <a href="/Musica/" class="font-bold px-3 py-1 rounded-xl lt-md:w-full md:text-sm border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-blue-900 text-center">Musica</a>
+          </li>
+          
+          <li class="lt-md:w-full flex-center">
+            <a href="/Noticias/" class="font-bold px-3 py-1 rounded-xl lt-md:w-full md:text-sm border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-blue-900 text-center">Noticias</a>
+          
+          </li>
+        </ul>
+      </nav>
+  </div>
+</header>
+
+
+
+
+
+  <!-- Contenido dinámico -->
+  <main class="container mx-auto p-4">
+    <slot /> 
+  </main>
+
+  <footer id="nav-footer" class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+      
+      <!-- Logo y Descripción -->
+      <div>
+        <a href="/" class="text-2xl font-bold text-white">OtakuPlayHub</a>
+        <img src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=67a7d778&is=67a685f8&hm=dc64a830b2c44f749108991256d4a75de1cc1f8b659a17c232a463aeaafb737a&" 
+          alt="OtakuPlayHub Logo" class="mt-3 w-32 h-32 rounded-full mx-auto md:mx-0">
+      </div>
+  
+      <!-- Redes Sociales -->
+      <nav aria-labelledby="footer-social">
+        <h2 id="footer-social" class="text-lg font-semibold text-white border border-white px-2 py-1 inline-block rounded-full">Síguenos</h2>
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a href="https://x.com/anime1234r" target="_blank" rel="noopener noreferrer" 
+               class="border border-blue-400 px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">
+              <i class="fab fa-twitter text-blue-400"></i> Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@anime1234rr" target="_blank" rel="noopener noreferrer" 
+               class="border border-red-500 px-4 py-2 inline-block hover:text-red-500 transition rounded-full">
+              <i class="fab fa-youtube text-red-500"></i> YouTube
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/anime1234rr" target="_blank" rel="noopener noreferrer" 
+               class="border border-purple-500 px-4 py-2 inline-block hover:text-purple-500 transition rounded-full">
+              <i class="fab fa-twitch text-purple-500"></i> Twitch
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/QMY4r4sSnB" target="_blank" rel="noopener noreferrer" 
+               class="border border-indigo-400 px-4 py-2 inline-block hover:text-indigo-400 transition rounded-full">
+              <i class="fab fa-discord text-indigo-400"></i> Discord
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      
+      <!-- Navegación -->
+      <nav aria-labelledby="footer-navigation">
+        <h2 id="footer-navigation" class="text-lg font-semibold text-white border border-white px-2 py-1 inline-block rounded-full">Navegación</h2>
+        <ul class="mt-4 space-y-2">
+           <li><a href="/Faq" class="border border-white px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">Preguntas frecuentes</a></li>
+           <li><a href="/Términos y Condiciones" class="border border-white px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">Términos y condiciones</a></li>
+           <li><a href="/privacy" class="border border-white px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">Política de privacidad</a></li>
+           <li><a href="/contact" class="border border-white px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">Contacto</a></li>
+           <li><a href="/About" class="border border-white px-4 py-2 inline-block hover:text-blue-400 transition rounded-full">Sobre nosotros</a></li>
+
+        </ul>
+      </nav>
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center text-sm text-gray-500 mt-6 border-t border-gray-700 pt-4">
+      &copy; 2024 OtakuPlayHub. Todos los derechos reservados.
+    </div>
+  </footer>
+
+
+</body>
+</html>

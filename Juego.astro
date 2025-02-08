@@ -1,0 +1,11 @@
+---
+// Juego.astro
+const { imagen, titulo, link } = Astro.props;
+---
+
+<div class="juego-card">
+  <a href={link}>
+    <img src={imagen} alt={titulo}>
+    <h3>{titulo}</h3>
+  </a>
+</div>

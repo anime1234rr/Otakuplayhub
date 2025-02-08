@@ -1,0 +1,80 @@
+.anime-section {
+    text-align: center; 
+  }
+  
+  .anime-section img {
+    width: 200px; 
+    height: 300px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .anime-section h3 {
+    margin-top: 1rem; 
+  }
+
+  .juego-section {
+    text-align: center;
+  }
+  
+  .juego-section img {
+    width: 200px; 
+    height: 300px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .juego-section h3 {
+    margin-top: 1rem; 
+  }
+
+.contenido-centrado {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  color: #e63946;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.section h2 {
+  color: #1d3557;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}

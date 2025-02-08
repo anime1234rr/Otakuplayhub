@@ -1,0 +1,21 @@
+{
+  "name": "stellar-spectrum",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@tailwindcss/postcss": "^4.0.4",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "astro": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "boxicons": "^2.1.4",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3"
+  }
+}

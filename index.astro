@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from '../components/Header.astro';
+---
+
+
+
+<Layout title="OtakuPlayhub">
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold">OtakuPlayhub</h1>
+    <p class="mt-4 text-lg">¡Donde la pasión se encuentra con la diversión!</p>
+  </section>
+
+ 
+
+<section class="container mx-auto my-16 space-y-8 lt-md:px-2">
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    
+    <!-- Sección de Anime -->
+    <li class="flex flex-col gap-2 p-3 border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <img src="https://cdn.discordapp.com/attachments/1005196410846711809/1336395529499705426/anime.jpg?ex=67a8ecd3&is=67a79b53&hm=8bfc17f2ee0831d1888b5a178a93a9976a79693ed0561ae29fa6e6e9431055de&" alt="Anime" class="w-100 h-auto mx-auto rounded-lg object-cover dark:bg-neutral-800 bg-neutral-300">
+      <p class="text-center font-semibold text-lg text-neutral-800 dark:text-neutral-300">Anime</p>
+      <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">¡Explora el fascinante mundo del anime!</p>
+      <a href="/Anime" class="mt-4 inline-block px-4 py-2 border border-blue-400 text-blue-400 rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300">Explorar</a>
+    </li>
+    
+    <!-- Sección de Juegos -->
+    <li class="flex flex-col gap-2 p-3 border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <img src="https://icones.pro/wp-content/uploads/2022/07/icone-jeux-et-jeux-video-rose.png" alt="Juegos" class="w-11/12 h-auto mx-auto rounded-lg object-cover dark:bg-neutral-800 bg-neutral-300">
+      <p class="text-center font-semibold text-lg text-neutral-800 dark:text-neutral-300">Juegos</p>
+      <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">¡Sumérgete en emocionantes aventuras y desafíos!</p>
+      <a href="/Juegos" class="mt-4 inline-block px-4 py-2 border border-blue-400 text-blue-400 rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300">Explorar</a>
+    </li>
+    
+    <!-- Sección de Música -->
+    <li class="flex flex-col gap-2 p-3 border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <img src="https://cdn-icons-png.flaticon.com/512/1987/1987997.png" alt="Música" class="w-11/12 h-auto mx-auto rounded-lg object-cover dark:bg-neutral-800 bg-neutral-300">
+      <p class="text-center font-semibold text-lg text-neutral-800 dark:text-neutral-300">Música</p>
+      <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">¡Descubre nuevas melodías y bandas sonoras asombrosas!</p>
+      <a href="/Musica" class="mt-4 inline-block px-4 py-2 border border-blue-400 text-blue-400 rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300">Explorar</a>
+    </li>
+    
+    <!-- Sección de Foro -->
+    <li class="flex flex-col gap-2 p-3 border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <img src="https://cdn-icons-png.flaticon.com/512/2495/2495007.png" alt="Foro" class="w-11/12 h-auto mx-auto rounded-lg object-cover dark:bg-neutral-800 bg-neutral-300">
+      <p class="text-center font-semibold text-lg text-neutral-800 dark:text-neutral-300">Foro</p>
+      <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">¡Únete a la comunidad otaku y comparte tus experiencias!</p>
+      <a href="/Foro" class="mt-4 inline-block px-4 py-2 border border-blue-400 text-blue-400 rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300">Explorar</a>
+    </li>
+    
+    <!-- Sección de Eventos -->
+    <li class="flex flex-col gap-2 p-3 border border-neutral-300 dark:border-neutral-800 hover:border-blue-900 dark:hover:border-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <img src="https://cdn-icons-png.flaticon.com/512/3729/3729043.png" alt="Eventos" class="w-11/12 h-auto mx-auto rounded-lg object-cover dark:bg-neutral-800 bg-neutral-300">
+      <p class="text-center font-semibold text-lg text-neutral-800 dark:text-neutral-300">Eventos</p>
+      <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">¡Explora nuestras increíbles recompensas y beneficios!</p>
+      <a href="/Eventos" class="mt-4 inline-block px-4 py-2 border border-blue-400 text-blue-400 rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300">Explorar</a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="comentarios">
+ 
+  <section class="text-center py-10">
+        <h1 class="text-4xl font-bold">Comentarios</h1>
+        <p class="mt-4 text-lg">¡Comentarios de la comunidad!</p>
+  </section>
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURACIÓN VARIABLE: EDIT & UNCOMMENT THE SECTION BELOW TO INSERT DINAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#dynamic-data
+     */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your website's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your website's unique article identifier variable
+    };
+    */
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-anime1234r-github-io-web-descargas.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', new Date().toString());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+ 
+</Layout>
