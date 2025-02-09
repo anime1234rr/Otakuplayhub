@@ -1,11 +1,8 @@
 ---
-const links = [
-  { name: "Anime", url: "/Anime" },
-  { name: "Juegos", url: "/Juegos" },
-  { name: "Noticias", url: "/Noticias" },
-  { name: "Foro", url: "/Foro" },
-  { name: "Eventos", url: "/Eventos" },
-]
+// No deberías poner nada más que la configuración de Astro aquí, por ejemplo:
+// title, description, etc.
+import Layout from "../layouts/Layout.astro";
+import { links } from "../data/links.js"; // Si los enlaces son dinámicos, puedes importarlos así.
 ---
 
 <header class="bg-gray-800 py-4">
@@ -15,4 +12,5 @@ const links = [
     ))}
   </nav>
 </header>
+
 
