@@ -1,0 +1,55 @@
+---
+const images = [
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1336395529499705426/anime.jpg?ex=67a8ecd3&is=67a79b53&hm=8bfc17f2ee0831d1888b5a178a93a9976a79693ed0561ae29fa6e6e9431055de&",
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1338986078610260039/clannad-63.jpg?ex=67ad1376&is=67abc1f6&hm=b4580aaaecfab8616f36c1724bac280701da75dc509c66ec0def8d4bbcc2cd2f&",
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1338986078060941503/charlotte.jpg?ex=67ad1376&is=67abc1f6&hm=d89372dfad5eeacab02bd11f1e140ff48c202071f9fc4dd7ff916d920e63951b&",
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1339672187438891048/86.webp?ex=67af9273&is=67ae40f3&hm=b57fd38c0203ebb04246b879750cf665f4c04406fb3b9d27e0a6ff99855c9308&",
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1339672855603839028/another.jpg?ex=67af9312&is=67ae4192&hm=a5e32aac27f14b14c85f024f5fb86bd316cc2c1e41c7ae162334924e23e069ec&",
+  "https://cdn.discordapp.com/attachments/1005196410846711809/1339674322507272395/sukasuka.webp?ex=67af9470&is=67ae42f0&hm=3a8565aa92fefdb10e3688b3a00feec01671badb4c24454d5bd00f62c13f0a56&",
+];
+---
+
+<section class="image-slider">
+    <img id="slider-image" src={images[0]} alt="Slider" class="w-full h-full object-cover rounded-lg shadow-lg">
+  </li>
+</section>
+
+<script>
+  let currentIndex = 0;
+  const images = [
+    "https://cdn.discordapp.com/attachments/1005196410846711809/1336395529499705426/anime.jpg?ex=67a8ecd3&is=67a79b53&hm=8bfc17f2ee0831d1888b5a178a93a9976a79693ed0561ae29fa6e6e9431055de&",
+    "https://cdn.discordapp.com/attachments/1005196410846711809/1338986078610260039/clannad-63.jpg?ex=67ad1376&is=67abc1f6&hm=b4580aaaecfab8616f36c1724bac280701da75dc509c66ec0def8d4bbcc2cd2f&",
+    "https://cdn.discordapp.com/attachments/1005196410846711809/1338986078060941503/charlotte.jpg?ex=67ad1376&is=67abc1f6&hm=d89372dfad5eeacab02bd11f1e140ff48c202071f9fc4dd7ff916d920e63951b&",
+    "https://cdn.discordapp.com/attachments/1005196410846711809/1339672187438891048/86.webp?ex=67af9273&is=67ae40f3&hm=b57fd38c0203ebb04246b879750cf665f4c04406fb3b9d27e0a6ff99855c9308&",
+    "https://cdn.discordapp.com/attachments/1005196410846711809/1339672855603839028/another.jpg?ex=67af9312&is=67ae4192&hm=a5e32aac27f14b14c85f024f5fb86bd316cc2c1e41c7ae162334924e23e069ec&",
+
+    
+
+
+  ];
+
+  
+  function updateImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    const sliderImage = document.getElementById("slider-image");
+    if (sliderImage) {
+      (sliderImage as HTMLImageElement).src = images[currentIndex];
+    }
+  }
+
+  setInterval(updateImage, 7000);
+</script>
+
+<style>
+  .image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+  }
+
+  img {
+    max-width: 50%;
+    transition: opacity 0.5s ease-in-out;
+  }
+</style>

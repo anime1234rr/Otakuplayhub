@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Juego from "../components/Juego.astro"; 
+---
+
+<Layout title="Juegos - OtakuPlayhub">
+  <section class="text-center py-10">
+        <h1 class="text-4xl font-bold">Juegos</h1>
+        <p class="mt-4 text-lg">¡Juegos de la comunidad!</p>
+      </section>
+
+    <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+  <div class="grid grid-cols-3 gap-4">
+    <Juego 
+      imagen="/images/super-mario-bros.jpg" 
+      titulo="Super Mario Bros." 
+      link="/juegos/super-mario-bros" 
+    />
+    <Juego 
+      imagen="/images/otro-juego.jpg" 
+      titulo="Otro Juego" 
+      link="/juegos/otro-juego" 
+    />
+    {/* no tengo mas juegos, soy pobre */}
+  </div>
+
+    
+    
+</Layout>

@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "jsx": "react",  // Esto asegura que Astro soporte JSX con React
+    "baseUrl": ".",   // Es necesario para usar rutas relativas
+    "paths": {
+      "@components/*": ["src/components/*"]  // Configura el alias para que puedas importar componentes de manera más limpia
+    }
+  }
+}

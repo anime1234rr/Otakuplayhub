@@ -1,0 +1,17 @@
+---
+const links = [
+  { name: "Anime", url: "/Anime" },
+  { name: "Juegos", url: "/Juegos" },
+  { name: "Noticias", url: "/Noticias" },
+  { name: "Foro", url: "/Foro" },
+  { name: "Eventos", url: "/Eventos" },
+]
+---
+
+<header class="bg-gray-800 py-4">
+  <nav class="container mx-auto flex justify-center space-x-6">
+    {links.map(link => (
+      <a href={link.url} class="text-blue-400 hover:underline">{link.name}</a>
+    ))}
+  </nav>
+</header>

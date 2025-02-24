@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Faq - OtakuPlayhub">
+
+    <section class="text-center py-10">
+        <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-4 text-center">Preguntas Frecuentes (FAQ)</h2>
+      </section>
+    
+      <section class="container mx-auto px-4">
+            
+            <!-- preguntas echa por una weacion -->
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Qué es OtakuPlayhub?</summary>
+                    <p>OtakuPlayhub es un sitio web dedicado al anime y a los juegos, creado para la comunidad.</p>
+                </details>
+            </div>
+    
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Cómo puedo unirme a OtakuPlayhub?</summary>
+                    <p>Para unirte a OtakuPlayhub, simplemente regístrate en el sitio web y comienza a interactuar con la comunidad.</p>
+                </details>
+            </div>
+    
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Puedo recomendar animes o juegos en la plataforma?</summary>
+                    <p>¡Por supuesto! La comunidad está abierta a recomendaciones de anime y juegos. Puedes compartir tus favoritos en los foros o grupos.</p>
+                </details>
+            </div>
+    
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Qué tipo de contenido puedo encontrar en OtakuPlayhub?</summary>
+                    <p>En OtakuPlayhub encontrarás noticias, reseñas, recomendaciones y discusiones sobre anime y videojuegos, además de eventos y actividades para la comunidad.</p>
+                </details>
+            </div>
+    
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Hay eventos o torneos en OtakuPlayhub?</summary>
+                    <p>Sí, organizamos eventos temáticos, concursos de anime, torneos de videojuegos y más actividades para la comunidad.</p>
+                </details>
+            </div>
+    
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Puedo hacer amigos en OtakuPlayhub?</summary>
+                    <p>¡Sí! OtakuPlayhub está diseñado para que los fans del anime y los videojuegos se conecten, compartan sus intereses y hagan nuevas amistades.</p>
+                </details>
+            </div>
+            
+            <div class="faq-item mb-4 p-4 bg-gray-700 rounded-lg max-w-xl mx-auto">
+                <details>
+                    <summary class="text-xl font-semibold text-blue-400 hover:underline">¿Hay un servidor de Discord para la comunidad?</summary>
+                    <p>Sí, contamos con un servidor de Discord donde puedes chatear en tiempo real con otros miembros de la comunidad.</p>
+                </details>
+            </div>
+                
+            </div>
+    
+        </div>
+    </section>
+
+    <section id="comentarios">
+
+        <section class="text-center py-10">
+            <h1 class="text-4xl font-bold">Comentarios</h1>
+          </section>
+
+        <div id="disqus_thread"></div>
+        <script>
+          /**
+           *  RECOMMENDED CONFIGURACIÓN VARIABLE: EDIT & UNCOMMENT THE SECTION BELOW TO INSERT DINAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#dynamic-data
+           */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL; // Replace PAGE_URL with your website's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your website's unique article identifier variable
+          };
+          */
+      
+          (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://https-anime1234r-github-io-web-descargas.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', new Date().toString());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    
+     
+</Layout>
