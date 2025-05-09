@@ -22,6 +22,6 @@ Actualmente se están desarrollando las siguientes secciones:
 
 ```bash
 npm install     # Instala todas las dependencias
-npm run dev     # Ejecuta el servidor de desarrollo (http://localhost:4321)
-npm run build   # Construye el sitio para producción en /dist
+npm run dev     # Ejecuta el proyecto en (http://localhost:4321)
+npm run build   # Construye el proyecto para la producción en /dist
 npm run preview # Previsualiza la versión de producción localmente
