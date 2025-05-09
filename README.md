@@ -16,7 +16,9 @@ Actualmente se están desarrollando las siguientes secciones:
 
 - **Astro** 
 - **TailwindCSS** 
-- **Netlify** 
+- **Netlify**
+- **JavaScript**
+- **Css* 
 
 ## 🚀 Comandos disponibles
 
