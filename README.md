@@ -16,8 +16,7 @@ Actualmente se están desarrollando las siguientes secciones:
 
 - **Astro** — Framework principal (SSR + generación estática)
 - **TailwindCSS** — Sistema de estilos utilitario
-- **Astro DB / SQLite / Supabase** *(en exploración)* — Para gestión de datos
-- **Vercel / Netlify** — Opciones de despliegue
+- **Netlify** — Opciones de despliegue
 
 ## 🧾 Estructura del proyecto
 

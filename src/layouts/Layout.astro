@@ -1,6 +1,6 @@
 ---
 const { title = "Otakuplahub" } = Astro.props;
-import Otakupalyhub from "../assets/Otakupalyhub.jpg";
+import Otakuplayhub from "../assets/Otakuplayhub.webp";
 
 ---
 
@@ -28,7 +28,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           <a href="/" title="Inicio" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
             <img 
               class="w-10 h-10 rounded-full border-2 border-blue-500" 
-              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              src={Otakuplayhub.src || "/placeholder.svg"} 
               alt="Logo de OtakuPlayhub" 
             />
             <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent hidden sm:block">
@@ -103,7 +103,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
             class="flex items-center justify-center transition-transform duration-300 hover:scale-105"
           >
             <img 
-              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              src={Otakuplayhub.src || "/placeholder.svg"} 
               class="w-9 h-9 rounded-full border-2 border-blue-500" 
               alt="Perfil de usuario" 
             />
@@ -186,7 +186,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           <div class="flex items-center gap-3 mb-4">
             <img 
               class="w-12 h-12 rounded-full border-2 border-blue-500" 
-              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              src={Otakuplayhub.src || "/placeholder.svg"}  
               alt="Logo de OtakuPlayhub" 
             />
             <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
