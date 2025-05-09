@@ -14,11 +14,9 @@ Actualmente se están desarrollando las siguientes secciones:
 
 ## ⚙️ Tecnologías usadas
 
-- **Astro** — Framework principal (SSR + generación estática)
-- **TailwindCSS** — Sistema de estilos utilitario
-- **Netlify** — Opciones de despliegue
-
-## 🧾 Estructura del proyecto
+- **Astro**
+- **TailwindCSS**
+- **Netlify**
 
 
 ## 🚀 Comandos disponibles
