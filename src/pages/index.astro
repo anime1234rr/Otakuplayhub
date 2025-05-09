@@ -1,0 +1,334 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from '../components/Header.astro';
+
+import kakegurui from "../assets/Kakegurui.jpg";
+import nierAutomata from "../assets/Nier Automata.jpg";
+import aoNoOrchestra from "../assets/1-animes-de-musica-ao-no-orchestra.jpg";
+import anime86 from "../assets/86.jpg";
+import another from "../assetsanother.jpg";
+import charlotte from "../assets/charlotte.jpg";
+import clannad from "../assets/clannad.jpg";
+import construction from "../assets/Construction.jpg";
+import discordImg from "../assets/discord.jpg";
+import fufu from "../assets/Fufu.jpg";
+import osamake from "../assets/osamakefull.jpg";
+import aninime from "../assets/aninime.jpg";
+import MikuMiku from "../assets/MikuMiku.png";
+import Otakupalyhub from "../assets/Otakupalyhub.jpg";
+---
+
+<Layout title="OtakuPlayhub">
+  <!-- Hero Section -->
+  <section class="py-16 px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+      OtakuPlayhub
+    </h1>
+    <p class="mt-4 text-xl text-gray-300">¡Donde la pasión se encuentra con la diversión!</p>
+    
+    <!-- Decorative elements -->
+    <div class="flex justify-center mt-8">
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+    </div>
+  </section>
+  
+  <!-- Categories Grid -->
+  <section class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 flex items-center justify-center gap-3">
+      <span class="w-8 h-8 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center text-blue-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      </span>
+      <span>Explora Nuestras Categorías</span>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Anime Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={kakegurui.src || "/placeholder.svg"} 
+            alt="Anime" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-purple-900 bg-opacity-50 flex items-center justify-center text-purple-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Anime</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Explora el fascinante mundo del anime! Descubre nuevas series, clásicos imperdibles y comparte tus opiniones.</p>
+          <a 
+            href="/Anime" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Juegos Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={nierAutomata.src || "/placeholder.svg"} 
+            alt="Juegos" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center text-blue-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Juegos</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Sumérgete en emocionantes aventuras y desafíos! Encuentra los mejores juegos y comparte estrategias.</p>
+          <a 
+            href="/Juegos" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Música Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={aoNoOrchestra.src || "/placeholder.svg"} 
+            alt="Música" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-green-900 bg-opacity-50 flex items-center justify-center text-green-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Música</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Descubre nuevas melodías y bandas sonoras asombrosas! Explora la música de tus animes favoritos.</p>
+          <a 
+            href="/Musica" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Foro Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={discordImg.src || "/placeholder.svg"} 
+            alt="Foro" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-indigo-900 bg-opacity-50 flex items-center justify-center text-indigo-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Foro</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Únete a la comunidad otaku y comparte tus experiencias! Debate, pregunta y conecta con otros fans.</p>
+          <a 
+            href="/Foro" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Eventos Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={aninime.src || "/placeholder.svg"} 
+            alt="Eventos" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-red-900 bg-opacity-50 flex items-center justify-center text-red-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Eventos</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Participa en nuestros eventos exclusivos! Concursos, torneos y actividades especiales para la comunidad.</p>
+          <a 
+            href="/Eventos" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Recompensas Card -->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={MikuMiku.src || "/placeholder.svg"} 
+            alt="Recompensas" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-yellow-900 bg-opacity-50 flex items-center justify-center text-yellow-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Recompensas</h3>
+          </div>
+          <p class="text-gray-300 mb-5">¡Descubre un mundo lleno de emocionantes premios y sorpresas! Gana puntos y canjéalos por recompensas exclusivas.</p>
+          <a 
+            href="/Recompensas" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-8 md:p-12 shadow-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">¡Únete a nuestra comunidad!</h2>
+          <p class="text-gray-200 max-w-lg">
+            Forma parte de OtakuPlayhub y conecta con miles de fans del anime, manga y videojuegos. 
+            Comparte tus opiniones, participa en eventos exclusivos y descubre contenido increíble.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a 
+            href="/registro" 
+            class="px-6 py-3 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-200 text-center"
+          >
+            Registrarse
+          </a>
+          <a 
+            href="https://discord.gg/QMY4r4sSnB" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center gap-2"
+          >
+            <i class="fab fa-discord"></i>
+            Unirse a Discord
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Latest News Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3">
+        <span class="w-8 h-8 rounded-full bg-purple-900 bg-opacity-50 flex items-center justify-center text-purple-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+        </span>
+        <span>Últimas Noticias</span>
+      </h2>
+      <a 
+        href="/Noticias" 
+        class="text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1"
+      >
+        Ver todas
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+    
+    <!-- News cards would go here -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20">
+        <div class="p-5">
+          <span class="inline-block px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 text-xs rounded-full mb-3">Anime</span>
+          <h3 class="text-lg font-bold text-white mb-2">Nuevo tráiler de la temporada final de Attack on Titan</h3>
+          <p class="text-gray-300 text-sm mb-4">Se ha lanzado un nuevo tráiler para la parte final de Attack on Titan que promete un épico desenlace...</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-400 text-xs">Hace 2 días</span>
+            <a href="/Noticias/attack-on-titan" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20">
+        <div class="p-5">
+          <span class="inline-block px-2 py-1 bg-green-900 bg-opacity-50 text-green-300 text-xs rounded-full mb-3">Juegos</span>
+          <h3 class="text-lg font-bold text-white mb-2">Final Fantasy XVI recibe nueva actualización</h3>
+          <p class="text-gray-300 text-sm mb-4">Square Enix ha lanzado una nueva actualización para Final Fantasy XVI que incluye nuevos contenidos y mejoras...</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-400 text-xs">Hace 5 días</span>
+            <a href="/Noticias/final-fantasy-xvi" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20">
+        <div class="p-5">
+          <span class="inline-block px-2 py-1 bg-red-900 bg-opacity-50 text-red-300 text-xs rounded-full mb-3">Eventos</span>
+          <h3 class="text-lg font-bold text-white mb-2">Anunciado el próximo evento de cosplay en Madrid</h3>
+          <p class="text-gray-300 text-sm mb-4">Se ha anunciado un nuevo evento de cosplay en Madrid para el próximo mes con invitados especiales...</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-400 text-xs">Hace 1 semana</span>
+            <a href="/Noticias/evento-cosplay-madrid" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

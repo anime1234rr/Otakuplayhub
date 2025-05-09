@@ -1,0 +1,234 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Acerca de OtakuPlayHub";
+---
+
+<Layout title="Sobre Nosotros - OtakuPlayhub">
+  <main class="bg-[#0d1117] text-white min-h-screen py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Encabezado -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Sobre Nosotros
+        </h1>
+        <div class="mt-4 flex items-center justify-center gap-2">
+          <span class="text-xl">🎮</span>
+          <p class="text-lg text-gray-300">Descubre quiénes somos y lo que hacemos</p>
+          <span class="text-xl">📺</span>
+        </div>
+        <div class="mt-8 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Contenido principal -->
+      <div class="bg-[#111827] rounded-xl shadow-lg p-8 md:p-10 border border-gray-800">
+        <!-- Introducción -->
+        <div class="mb-10 p-6 bg-[#1a2234] rounded-lg border-l-4 border-purple-500">
+          <h2 class="text-2xl font-bold mb-4 text-white">Nuestra Misión</h2>
+          <p class="text-gray-300">
+            En OtakuPlayHub, nos apasiona el mundo del anime, manga y los videojuegos. Nuestra misión es crear un espacio donde los fans puedan conectar, 
+            compartir y disfrutar de su pasión por la cultura otaku y gaming en un ambiente amigable y diverso.
+          </p>
+        </div>
+
+        
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center text-blue-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">¿Qué puedes encontrar aquí?</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-6">
+            <!-- Foros y comunidad -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-purple-900 bg-opacity-50 flex items-center justify-center text-purple-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-400">Foros y comunidad</h3>
+                  <p class="text-gray-300 mt-1">Interactúa con otros fans, comparte opiniones y haz nuevos amigos con intereses similares.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Eventos y concursos -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-yellow-900 bg-opacity-50 flex items-center justify-center text-yellow-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-yellow-400">Eventos y concursos</h3>
+                  <p class="text-gray-300 mt-1">Participa en eventos exclusivos y concursos con premios especiales para la comunidad.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tienda y recomendaciones -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-green-900 bg-opacity-50 flex items-center justify-center text-green-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-green-400">Tienda y recomendaciones</h3>
+                  <p class="text-gray-300 mt-1">Descubre productos otaku seleccionados y recomendaciones personalizadas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Biblioteca personal -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-red-900 bg-opacity-50 flex items-center justify-center text-red-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-red-400">Biblioteca personal</h3>
+                  <p class="text-gray-300 mt-1">Organiza y sigue tus animes, mangas, manhwas y videojuegos favoritos.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reseñas y valoraciones -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center text-blue-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-400">Reseñas y valoraciones</h3>
+                  <p class="text-gray-300 mt-1">Lee y escribe reseñas de series, películas y juegos hechas por la comunidad.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Noticias y lanzamientos -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-orange-900 bg-opacity-50 flex items-center justify-center text-orange-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-orange-400">Noticias y lanzamientos</h3>
+                  <p class="text-gray-300 mt-1">Mantente al día con las últimas noticias y lanzamientos del mundo anime y gaming.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chats y grupos -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-900 bg-opacity-50 flex items-center justify-center text-indigo-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-indigo-400">Chats y grupos</h3>
+                  <p class="text-gray-300 mt-1">Únete a chats y grupos por intereses o fandoms específicos en nuestra comunidad.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perfiles personalizados -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-pink-900 bg-opacity-50 flex items-center justify-center text-pink-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-400">Perfiles personalizados</h3>
+                  <p class="text-gray-300 mt-1">Personaliza tu perfil con avatares, insignias y estadísticas para mostrar tus logros.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sistema de puntos -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-yellow-900 bg-opacity-50 flex items-center justify-center text-yellow-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-yellow-400">Sistema de puntos</h3>
+                  <p class="text-gray-300 mt-1">Gana puntos por participación que puedes canjear por recompensas exclusivas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guías y tutoriales -->
+            <div class="feature-card p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 bg-[#161b22]">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-green-900 bg-opacity-50 flex items-center justify-center text-green-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-green-400">Guías y tutoriales</h3>
+                  <p class="text-gray-300 mt-1">Aprende sobre anime, manga y videojuegos con nuestras guías y tutoriales detallados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Únete a nuestra comunidad -->
+        <div class="mt-12 p-6 bg-gradient-to-r from-blue-900 to-purple-900 rounded-lg text-center">
+          <h2 class="text-2xl font-bold mb-4">¡Únete a nuestra comunidad!</h2>
+          <p class="text-gray-200 mb-6">
+            Forma parte de OtakuPlayHub y conecta con miles de fans del anime, manga y videojuegos.
+          </p>
+          
+          <a 
+            href="https://discord.gg/QMY4r4sSnB" 
+            class="inline-block bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200">Unirse ahora
+          </a>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400 text-sm">
+            Última actualización: Mayo 08/05/2025
+          </p>
+          <div class="mt-4 flex justify-center gap-4">
+            <a href="/contacto" class="text-blue-400 hover:text-blue-300 transition-colors">Contacto</a>
+            <span class="text-gray-600">|</span>
+            <a href="/Términos y Condiciones" class="text-blue-400 hover:text-blue-300 transition-colors">Términos y Condiciones</a>
+          </div>
+        </div>
+
+      
+  </main>
+</Layout>
+
+<style>
+  .feature-card {
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style>

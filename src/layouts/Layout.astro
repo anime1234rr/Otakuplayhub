@@ -1,0 +1,460 @@
+---
+const { title = "Otakuplahub" } = Astro.props;
+import Otakupalyhub from "../assets/Otakupalyhub.jpg";
+
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title}</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css">
+  <script src="https://kit.fontawesome.com/f1cbaca1e1.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+
+  
+
+<!-- Navegación -->
+<header class="sticky top-0 z-50 bg-[#0d1117] border-b border-gray-800 shadow-md">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <!-- Navegación para escritorio -->
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-3">
+          <a href="/" title="Inicio" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+            <img 
+              class="w-10 h-10 rounded-full border-2 border-blue-500" 
+              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              alt="Logo de OtakuPlayhub" 
+            />
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent hidden sm:block">
+              OtakuPlayhub
+            </span>
+          </a>
+        </div>
+
+        <!-- Menú de navegación para escritorio -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-2">
+          <a 
+            href="/" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Inicio
+          </a>
+          <a 
+            href="/Anime" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Anime
+          </a>
+          <a 
+            href="/Juegos" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Juegos
+          </a>
+          <a 
+            href="/Musica" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Música
+          </a>
+          <a 
+            href="/Foro" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Foro
+          </a>
+          <a 
+            href="/Eventos" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Eventos
+          </a>
+          <a 
+            href="/Noticias" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Noticias
+          </a>
+        </div>
+
+        <!-- Acciones de usuario -->
+        <div class="flex items-center gap-3">
+          <!-- Discord -->
+          <a 
+            href="https://discord.gg/QMY4r4sSnB" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            title="Discord Oficial de OtakuPlayhub" 
+            class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-indigo-700 transition-colors duration-200"
+          >
+            <i class="fab fa-discord text-white"></i>
+          </a>
+          
+          <!-- Perfil de usuario -->
+          <a 
+            href="/Perfil" 
+            title="Perfil de usuario" 
+            class="flex items-center justify-center transition-transform duration-300 hover:scale-105"
+          >
+            <img 
+              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              class="w-9 h-9 rounded-full border-2 border-blue-500" 
+              alt="Perfil de usuario" 
+            />
+          </a>
+          
+          <!-- Botón de menú móvil -->
+          <button 
+            id="mobile-menu-button" 
+            class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            aria-label="Abrir menú"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Menú móvil (oculto por defecto) -->
+      <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-gray-800">
+        <div class="grid grid-cols-2 gap-2 px-4">
+          <a 
+            href="/" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Inicio
+          </a>
+          <a 
+            href="/Anime" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Anime
+          </a>
+          <a 
+            href="/Juegos" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Juegos
+          </a>
+          <a 
+            href="/Musica" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Música
+          </a>
+          <a 
+            href="/Foro" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Foro
+          </a>
+          <a 
+            href="/Eventos" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Eventos
+          </a>
+          <a 
+            href="/Noticias" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Noticias
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-4">
+    <slot /> 
+  </main>
+
+
+<!-- Pie de página -->
+<footer class="bg-[#111827] border-t border-gray-800 pt-12 pb-8">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Sección de información -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <img 
+              class="w-12 h-12 rounded-full border-2 border-blue-500" 
+              src="https://cdn.discordapp.com/attachments/1005196410846711809/1337547271897612341/Otakuplayhub.webp?ex=680377b8&is=68022638&hm=12492122ce753db1f7926838452efe05ce055b05690989bae85b55e94669c2d0&" 
+              alt="Logo de OtakuPlayhub" 
+            />
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              OtakuPlayhub
+            </span>
+          </div>
+
+          <p class="text-gray-300 mb-6">
+            ¡Bienvenidos a todos los amantes del anime y los juegos! Aquí podrás compartir tus animes y mangas favoritos, 
+            discutir sobre tus juegos preferidos y conocer a otros fans apasionados.
+          </p>
+
+          <!-- Redes sociales -->
+          <div class="flex items-center space-x-3 mb-6">
+            <a 
+              href="https://x.com/anime1234r" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Twitter oficial de OtakuPlayhub" 
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+
+            <a 
+              href="https://www.facebook.com/profile.php?id=61550229485571" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Facebook oficial de OtakuPlayhub" 
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a 
+              href="https://www.instagram.com/anime1234r/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Instagram oficial de OtakuPlayhub" 
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a 
+              href="https://github.com/anime1234rr" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="GitHub oficial de OtakuPlayhub" 
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a 
+              href="https://discord.gg/QMY4r4sSnB" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Discord oficial de OtakuPlayhub" 
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-indigo-700 transition-colors duration-200"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegación -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Navegación</h3>
+          <ul class="space-y-2">
+            <li>
+              <a 
+                href="/" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Anime" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                </svg>
+                Anime
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Juegos" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                </svg>
+                Juegos
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Musica" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                </svg>
+                Música
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Foro" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                </svg>
+                Foro
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Eventos" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Eventos
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Noticias" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+                Noticias
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ayuda -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Ayuda</h3>
+          <ul class="space-y-2">
+            <li>
+              <a 
+                href="/Términos y Condiciones" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Términos y Condiciones
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Política de privacidad" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                Política de Privacidad
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Sobre nosotros" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Sobre Nosotros
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/Faq" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Preguntas Frecuentes
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/contacto" 
+                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Suscripción al boletín -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-white">Mantente conectado</h3>
+          <p class="text-gray-300 mb-4">Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones.</p>
+          
+          <form class="space-y-3">
+            <div>
+              <input 
+                type="email" 
+                placeholder="Tu correo electrónico" 
+                class="w-full px-4 py-2 bg-[#1a2234] border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              />
+            </div>
+            <button 
+              type="submit" 
+              class="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+            >
+              Suscribirse
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Línea divisoria -->
+      <div class="h-px bg-gray-800 my-8"></div>
+
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-400 text-sm">
+          &copy; 2025 OtakuPlayHub. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para el menú móvil -->
+  <script>
+    // Toggle para el menú móvil
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+</body>
+</html>
+

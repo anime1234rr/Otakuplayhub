@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Preguntas Frecuentes - OtakuPlayhub">
+    <main class="bg-[#0d1117] text-white min-h-screen py-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Encabezado -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Preguntas Frecuentes
+          </h1>
+          <div class="mt-4 flex items-center justify-center gap-2">
+            <span class="text-xl">❓</span>
+            <p class="text-lg text-gray-300">Respuestas a las dudas más comunes</p>
+            <span class="text-xl">❓</span>
+          </div>
+          <div class="mt-8 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+        </div>
+  
+        <!-- Contenido principal -->
+        <div class="bg-[#111827] rounded-xl shadow-lg p-8 md:p-10 border border-gray-800">
+          <!-- Introducción -->
+          <div class="mb-10 p-6 bg-[#1a2234] rounded-lg border-l-4 border-blue-500">
+            <p class="text-gray-300">
+              Hemos recopilado las preguntas más frecuentes sobre OtakuPlayhub. Si no encuentras la respuesta que buscas, 
+              no dudes en <a href="/contact" class="text-blue-400 hover:underline">contactarnos</a>.
+            </p>
+          </div>
+  
+          <!-- Acordeón de preguntas -->
+          <div class="space-y-4">
+            <!-- Pregunta 1 -->
+            <div class="faq-item border border-gray-700 rounded-lg overflow-hidden">
+              <button class="faq-question w-full flex items-start justify-between p-5 bg-[#161b22] hover:bg-[#1c2333] transition-colors duration-200 text-left">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center text-blue-300 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold">¿Qué es OtakuPlayhub?</h3>
+                </div>
+              </button>
+              <div class="faq-answer p-5 bg-[#1a2234] border-t border-gray-700">
+                <p class="text-gray-300">
+                  OtakuPlayhub es un sitio web dedicado al anime y a los videojuegos, creado para unir a fans de todo el mundo. 
+                  Nuestra plataforma ofrece foros, noticias, reseñas, eventos y una comunidad vibrante donde puedes compartir 
+                  tu pasión por la cultura otaku y gaming.
+                </p>
+              </div>
+            </div>
+  
+            <!-- Pregunta 2 -->
+            <div class="faq-item border border-gray-700 rounded-lg overflow-hidden">
+              <button class="faq-question w-full flex items-start justify-between p-5 bg-[#161b22] hover:bg-[#1c2333] transition-colors duration-200 text-left">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-purple-900 bg-opacity-50 flex items-center justify-center text-purple-300 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold">¿Puedo recomendar animes o juegos en la plataforma?</h3>
+                </div>
+              </button>
+              <div class="faq-answer p-5 bg-[#1a2234] border-t border-gray-700">
+                <p class="text-gray-300">
+                  ¡Por supuesto! La comunidad está abierta a recomendaciones de anime y juegos. Puedes compartir tus favoritos 
+                  en los foros o grupos temáticos. También puedes crear listas de recomendaciones, escribir reseñas detalladas 
+                  o participar en discusiones sobre los últimos lanzamientos. Tu opinión es valiosa para nuestra comunidad.
+                </p>
+              </div>
+            </div>
+  
+            <!-- Pregunta 3 -->
+            <div class="faq-item border border-gray-700 rounded-lg overflow-hidden">
+              <button class="faq-question w-full flex items-start justify-between p-5 bg-[#161b22] hover:bg-[#1c2333] transition-colors duration-200 text-left">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-green-900 bg-opacity-50 flex items-center justify-center text-green-300 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold">¿Hay eventos o torneos en OtakuPlayhub?</h3>
+                </div>
+              </button>
+              <div class="faq-answer p-5 bg-[#1a2234] border-t border-gray-700">
+                <p class="text-gray-300">
+                  Sí, organizamos regularmente eventos temáticos, concursos de anime, torneos de videojuegos y actividades para la comunidad. 
+                  Estos incluyen maratones de anime, competencias de cosplay, torneos de juegos populares y eventos especiales durante 
+                  convenciones o lanzamientos importantes. Los participantes pueden ganar premios exclusivos, insignias para su perfil 
+                  y reconocimiento en la comunidad.
+                </p>
+              </div>
+            </div>
+  
+            <!-- Pregunta 4 -->
+            <div class="faq-item border border-gray-700 rounded-lg overflow-hidden">
+              <button class="faq-question w-full flex items-start justify-between p-5 bg-[#161b22] hover:bg-[#1c2333] transition-colors duration-200 text-left">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-yellow-900 bg-opacity-50 flex items-center justify-center text-yellow-300 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold">¿Puedo hacer amigos en OtakuPlayhub?</h3>
+                </div>
+              </button>
+              <div class="faq-answer p-5 bg-[#1a2234] border-t border-gray-700">
+                <p class="text-gray-300">
+                  Claro, OtakuPlayhub es una comunidad donde puedes conocer personas con intereses similares. Puedes unirte a grupos de 
+                  discusión, participar en foros y eventos, y agregar a otros miembros como amigos para charlar sobre tus temas favoritos. 
+                  Es el lugar perfecto para hacer nuevos amigos y compartir tu pasión por el anime y los videojuegos.
+                </p>
+              </div>
+              <!-- Pie de página de términos -->
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+            <p class="text-gray-400 text-sm">
+              Última actualización: Mayo 08/05/2025
+            </p>
+            <div class="mt-4 flex justify-center gap-4">
+              <a href="/contacto" class="text-blue-400 hover:text-blue-300 transition-colors">Contacto</a>
+              <span class="text-gray-600">|</span>
+              <a href="/privacidad" class="text-blue-400 hover:text-blue-300 transition-colors">Política de Privacidad</a>
+            </div>
+          </div>
+            </div>
+          </div>
+        
+        </div>
+        
+      </div>
+    </main>
+
+    
+  </Layout>
+  
