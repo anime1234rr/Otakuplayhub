@@ -1,17 +1,225 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import eightySixImg from "../assets/eightySixImg.jpg";
+import charlottee from "../assets/charlottee.jpg"
+import Kakegurui from "../assets/kakegurui.jpg"
+import shingeki from "../assets/shingeki.jpeg";
+import dateALive from "../assets/dateAlive.jpg";
+import GrandBlue from "../assets/grandBlue.jpg";
+import Kimetsu_no_Yaiba from "../assets/Kimetsu_no_Yaiba.jpg";
+import solo_leveling from "../assets/solo_leveling.jpg";
+import Dandadan from "../assets/dandadan.jpg";
+
+
+// Datos de ejemplo para animes destacados
+const featuredAnime = [
+  {
+    id: 1,
+    title: '86: Eighty-Six',
+    image: eightySixImg.src || "/placeholder.svg?height=500&width=1200",
+    rating: 8.33,
+    episodes: 26,
+    genres: ['Acción', 'Fantasía', 'Histórico'],
+    description: 'La República de San Magnolia afirma no tener bajas en su guerra, pero oculta la verdad: el escuadrón 86, formado por personas discriminadas, lucha y muere en secreto contra la Legión enemiga. Vladilena Milizé, una oficial que apoya al 86, es asignada al escuadrón Spearhead, liderado por Shinei Nouzen, un soldado marcado por la muerte. Juntos enfrentan un sistema cruel, buscando esperanza en medio del horror.'
+  },
+  {
+    id: 2,
+    title: 'charlotte',
+    image: charlottee.src || "/placeholder.svg?height=500&width=1200",
+    rating: 7.75,
+    episodes: 13,
+    genres: ['Drama'],
+    description: 'Yuu Otosaka puede controlar cuerpos por cinco segundos, lo que usa para hacer trampa y destacar en la escuela. Su engaño termina cuando Nao Tomori lo descubre y lo obliga a unirse al consejo estudiantil de Hoshinoumi, una academia secreta para jóvenes con poderes. Juntos buscan a otros con habilidades, pero pronto se ven envueltos en algo mucho más oscuro.'
+  },
+  {
+    id: 3,
+    title: 'Kakegurui',
+    image: Kakegurui.src || "/placeholder.svg?height=500&width=1200",
+    rating: 7.22,
+    episodes: 12,
+    genres: ['Drama', 'Misterio', 'Suspenso'],
+    description: 'La Academia Privada Hyakkaou parece una escuela normal, pero de noche se convierte en un casino donde los estudiantes aprenden a manipular y apostar. Aquí, el dinero lo es todo. Yumeko Jabami, una misteriosa alumna nueva, no apuesta por ganar, sino por la emoción. Su estilo de juego impredecible amenaza con romper las reglas del sistema.'
+  },
+  {
+    id: 4,
+    title: 'Shingeki no Kyojin: Attack on Titan',
+    image:  shingeki.src || "/placeholder.svg?height=500&width=1200",
+    rating: 8.56,
+    episodes: 25,
+    genres: ['Super Poderes', 'Fantasia', 'Drama', 'Accion', 'Thriller', 'Isekai'],
+    description: 'Hace siglos, la humanidad fue casi aniquilada por los Titanes, monstruos humanoides que devoran personas por placer. Los sobrevivientes se refugiaron tras enormes muros, viviendo en paz durante cien años, hasta que un Titán colosal rompe la muralla exterior y desata el caos. Tras una pérdida devastadora, Eren Yeager se une a la Legión de Reconocimiento para luchar contra los Titanes. Junto a Mikasa y Armin, busca una forma de vencerlos antes de que caigan los últimos muros.'
+  },
+  {
+    id: 5,
+    title: 'Date a Live',
+    image:  dateALive.src || "/placeholder.svg?height=500&width=1200",
+    rating: 7.14,
+    episodes: 12,
+    genres: ['Aventura', 'Fantasía', 'Comedia'],
+    description: 'Hace treinta años, un terremoto espacial devastó Eurasia. Desde entonces, ocurren con menor intensidad.Shidou Itsuka, un estudiante común, se encuentra con un Espíritu, ser de otro mundo que provoca estos sismos. Mientras unos quieren destruirla, su hermana Kotori lo recluta para una misión insólita: hacer que los Espíritus se enamoren de él para salvar el mundo.'
+  },
+  {
+    id: 6,
+    title: 'Grand Blue',
+    image: GrandBlue.src || "/placeholder.svg?height=500&width=1200",
+    rating: 8.44,
+    episodes: 12,
+    genres: ['Comedia'],
+    description: 'Iori Kitahara se muda a la ciudad costera de Izu para su primer año de universidad, y se instala encima de Grand Blue, la tienda de buceo de su tío. Iori tiene grandes esperanzas y sueños de tener la experiencia universitaria ideal, pero al entrar en la tienda, se ve envuelto en las actividades alcohólicas de los despreocupados miembros del Club de Buceo que frecuentan el lugar. Persuadido por los estudiantes de último año Shinji Tokita y Ryuujirou Kotobuki, Iori se une a regañadientes a su peculiar fiesta. Su prima Chisa Kotegawa entra más tarde y lo sorprende en el acto, ganándose el desprecio absoluto de Iori.'
+  }
+];
+
+// Datos de ejemplo para temporadas
+const seasons = [
+  { id: 1, name: 'Invierno 2024', image: solo_leveling.src || "/placeholder.svg?height=500&width=1200", },
+  { id: 2, name: 'Otoño 2024', image: Dandadan.src || "/placeholder.svg?height=500&width=1200", },
+  { id: 3, name: 'Verano 2024',  image: Kimetsu_no_Yaiba.src || "/placeholder.svg?height=500&width=1200",},
+  { id: 4, name: 'Primavera 2024', image: Kimetsu_no_Yaiba.src || "/placeholder.svg?height=500&width=1200", }
+];
+
+// Datos de ejemplo para géneros
+const genres = [
+  'Acción', 'Aventura', 'Comedia', 'Drama', 'Fantasía', 'Horror', 
+  'Mecha', 'Misterio', 'Romance', 'Sci-Fi', 'Slice of Life', 'Deportes', 
+  'Sobrenatural', 'Thriller'
+];
 ---
 
-<Layout title="Anime - OtakuPlayhub">
-  
-  <section class="text-center py-10">
-        <h1 class="text-4xl font-bold">Anime</h1>
-        <p class="mt-4 text-lg">¡Proximamente!</p>
-  </section>
+<Layout title="Anime | OtakuPlayhub">
+  <main class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
+    <!-- Hero Section -->
+    <section class="relative h-[50vh] overflow-hidden">
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <img 
+        src={eightySixImg.src || "/placeholder.svg?height=500&width=1200"} 
+        alt="Anime Collection" 
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+          <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Anime
+          </span>
+        </h1>
+        <p class="text-xl text-gray-200 max-w-2xl">
+          Explora nuestra colección de anime, desde los clásicos hasta los últimos estrenos. 
+          Descubre nuevas series, películas y mantente al día con las últimas noticias.
+        </p>
+      </div>
+    </section>
 
-  <div>
-    <p>¡Estamos trabajando en esta sección! Mientras tanto, puedes explorar otras secciones de OtakuPlayhub.</p>
-  </div>
+    <!-- Search and Filter Section -->
+    <section class="bg-gray-800/50 py-6">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-4 items-center">
+          <div class="relative flex-grow">
+            <input 
+              type="text" 
+              placeholder="Buscar anime..." 
+              class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 pl-10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <div class="flex gap-2">
+            <select class="bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Todos los géneros</option>
+              {genres.map(genre => (
+                <option value={genre}>{genre}</option>
+              ))}
+            </select>
+            <select class="bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="popular">Popularidad</option>
+              <option value="newest">Más reciente</option>
+              <option value="rating">Mejor valorado</option>
+              <option value="az">A-Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  
+    <!-- Featured Anime Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-8">Anime Destacado</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredAnime.map(anime => (
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:shadow-blue-500/20 hover:shadow-xl">
+              <div class="relative h-60 overflow-hidden">
+                <img 
+                  src={anime.image || `/placeholder.svg?height=240&width=400&text=${encodeURIComponent(anime.title)}`} 
+                  alt={anime.title} 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute top-2 right-2 bg-blue-600 text-white text-sm font-bold px-2 py-1 rounded">
+                  ★ {anime.rating}
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                  <h3 class="text-xl font-bold text-white">{anime.title}</h3>
+                  <div class="flex gap-2 mt-1">
+                    {anime.genres.slice(0, 2).map(genre => (
+                      <span class="text-xs bg-gray-700/80 text-gray-200 px-2 py-1 rounded">{genre}</span>
+                    ))}
+                    {anime.genres.length > 2 && (
+                      <span class="text-xs bg-gray-700/80 text-gray-200 px-2 py-1 rounded">+{anime.genres.length - 2}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-300 text-sm">{anime.episodes} episodios</span>
+                  <span class="text-blue-400 text-sm font-medium">TV</span>
+                </div>
+                <p class="text-gray-300 text-sm line-clamp-3">{anime.description}</p>
+                <div class="mt-4 flex justify-between items-center">
+                  <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-300">
+                    Ver detalles
+                  </button>
+                  <button class="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-8 text-center">
+          <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors duration-300 font-medium">
+            Ver más anime
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasons Section -->
+    <section class="py-12 bg-gray-900/50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-8">Temporadas</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {seasons.map(season => (
+            <a href={`/anime/temporada/${season.id}`} class="group">
+              <div class="relative h-40 rounded-lg overflow-hidden">
+                <img 
+                  src={season.image || `/placeholder.svg?height=160&width=300&text=${encodeURIComponent(season.name)}`} 
+                  alt={season.name} 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{season.name}</h3>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
 </Layout>
