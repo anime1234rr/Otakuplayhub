@@ -15,7 +15,7 @@ Actualmente se están desarrollando las siguientes secciones:
 ## ⚙️ Tecnologías usadas
 - **Astro**
 - **TailwindCSS**
-- **Netlify**git 
+- **Netlify**
 - **JavaScript**
 - **Css**
 

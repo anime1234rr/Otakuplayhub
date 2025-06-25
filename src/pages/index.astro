@@ -1,23 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from '../components/Header.astro';
-
 import kakegurui from "../assets/Kakegurui.jpg";
-import nierAutomata from "../assets/Nier Automata.jpg";
 import aoNoOrchestra from "../assets/1-animes-de-musica-ao-no-orchestra.jpg";
-import anime86 from "../assets/86.jpg";
-import another from "../assetsanother.jpg";
-import charlotte from "../assets/charlotte.jpg";
 import clannad from "../assets/clannad.jpg";
-import construction from "../assets/Construction.jpg";
+import maid from "../assets/maid.png";
 import discordImg from "../assets/discord.jpg";
 import fufu from "../assets/Fufu.jpg";
-import osamake from "../assets/osamakefull.jpg";
 import aninime from "../assets/aninime.jpg";
-import MikuMiku from "../assets/MikuMiku.png";
+import GrandBlue from "../assets/GrandBlue.jpg";
 import Otakupalyhub from "../assets/Otakupalyhub.jpg";
 ---
 
+<!-- que ven mis ojos. es un horror-->
 <Layout title="OtakuPlayhub">
   <!-- Hero Section -->
   <section class="py-16 px-4 text-center">
@@ -44,7 +38,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
     </h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Anime Card -->
+      <!-- Seccion de Anime -->
       <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
         <div class="relative h-48 overflow-hidden">
           <img 
@@ -76,71 +70,11 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
         </div>
       </div>
       
-      <!-- Juegos Card -->
-      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
-        <div class="relative h-48 overflow-hidden">
-          <img 
-            src={nierAutomata.src || "/placeholder.svg"} 
-            alt="Juegos" 
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-        </div>
-        <div class="p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center text-blue-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white">Juegos</h3>
-          </div>
-          <p class="text-gray-300 mb-5">¡Sumérgete en emocionantes aventuras y desafíos! Encuentra los mejores juegos y comparte estrategias.</p>
-          <a 
-            href="/Juegos" 
-            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
-          >
-            <span>Explorar</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
       
-      <!-- Música Card -->
-      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
-        <div class="relative h-48 overflow-hidden">
-          <img 
-            src={aoNoOrchestra.src || "/placeholder.svg"} 
-            alt="Música" 
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-        </div>
-        <div class="p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 rounded-full bg-green-900 bg-opacity-50 flex items-center justify-center text-green-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white">Música</h3>
-          </div>
-          <p class="text-gray-300 mb-5">¡Descubre nuevas melodías y bandas sonoras asombrosas! Explora la música de tus animes favoritos.</p>
-          <a 
-            href="/Musica" 
-            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
-          >
-            <span>Explorar</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
       
-      <!-- Foro Card -->
+     
+      
+      <!-- Seccion de Foro-->
       <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
         <div class="relative h-48 overflow-hidden">
           <img 
@@ -172,7 +106,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
         </div>
       </div>
       
-      <!-- Eventos Card -->
+      <!--Seccion de Eventos -->
       <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
         <div class="relative h-48 overflow-hidden">
           <img 
@@ -203,12 +137,45 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           </a>
         </div>
       </div>
-      
-      <!-- Recompensas Card -->
+
+         <!--Seccion de Noticias-->
       <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
         <div class="relative h-48 overflow-hidden">
           <img 
-            src={MikuMiku.src || "/placeholder.svg"} 
+            src={maid.src || "/placeholder.svg"} 
+            alt="Eventos" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-full bg-red-900 bg-opacity-50 flex items-center justify-center text-red-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Noticias</h3>
+          </div>
+          <p class="text-gray-300 mb-5">Mantente al día con los últimos cambios, mejoras y nuevas funcionalidades 
+            que estamos implementando en la plataforma.</p>
+          <a 
+            href="/Noticias" 
+            class="inline-flex items-center justify-center w-full px-4 py-2 bg-[#1a2234] hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300 group-hover:bg-blue-600"
+          >
+            <span>Explorar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Seccion de Recompensas-->
+      <div class="bg-[#111827] rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 hover:transform hover:scale-[1.02] group">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src={GrandBlue.src || "/placeholder.svg"} 
             alt="Recompensas" 
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           >
@@ -301,7 +268,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           <p class="text-gray-300 text-sm mb-4">Se ha lanzado un nuevo tráiler para la parte final de Attack on Titan que promete un épico desenlace...</p>
           <div class="flex justify-between items-center">
             <span class="text-gray-400 text-xs">Hace 2 días</span>
-            <a href="/Noticias/attack-on-titan" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+            <a href="/" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
           </div>
         </div>
       </div>
@@ -313,7 +280,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           <p class="text-gray-300 text-sm mb-4">Square Enix ha lanzado una nueva actualización para Final Fantasy XVI que incluye nuevos contenidos y mejoras...</p>
           <div class="flex justify-between items-center">
             <span class="text-gray-400 text-xs">Hace 5 días</span>
-            <a href="/Noticias/final-fantasy-xvi" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+            <a href="/" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
           </div>
         </div>
       </div>
@@ -325,7 +292,7 @@ import Otakupalyhub from "../assets/Otakupalyhub.jpg";
           <p class="text-gray-300 text-sm mb-4">Se ha anunciado un nuevo evento de cosplay en Madrid para el próximo mes con invitados especiales...</p>
           <div class="flex justify-between items-center">
             <span class="text-gray-400 text-xs">Hace 1 semana</span>
-            <a href="/Noticias/evento-cosplay-madrid" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
+            <a href="/" class="text-blue-400 hover:text-blue-300 text-sm">Leer más</a>
           </div>
         </div>
       </div>

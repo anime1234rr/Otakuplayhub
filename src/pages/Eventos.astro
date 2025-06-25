@@ -1,50 +1,272 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import osamakefull from "../assets/osamakefull.jpg";
+import NierAutomata from "../assets/NierAutomata.jpg";
+import Construcion from "../assets/Construcion.jpg";
 ---
-
+<!-- esto es lo ultimo que hare hoy mismo, me da peresa son las 20 de la noche -->
 <Layout title="Eventos - OtakuPlayhub">
-  <section class="text-center py-10">
-    <h1 class="text-4xl font-bold">Eventos</h1>
-    <p class="mt-4 text-lg">¡Eventos de la comunidad!</p>
-  </section>
-
-  <section class="container mx-auto px-4">
-    <h1 class="text-center font-semibold">¡Bienvenido a los Eventos de la comunidad de OtakuPlayhub!</h1>
-
-    <p class="mt-4 text-center">Aquí encontrarás todos los eventos que estamos organizando. ¡Asegúrate de participar y disfrutar con otros miembros de la comunidad!</p>
-    <p class="mt-4 text-center">¡Proximamente!</p>
-
-    <!-- esto no es real-->
-    <div class="mt-8 bg-gray-700 p-6 rounded-lg shadow-lg">
-      <h3 class="text-xl font-semibold text-white">🎬 Maratón de Anime</h3>
-      <p class="text-gray-300 mt-2">Únete a nuestro maratón de anime donde veremos juntos una selección de animes populares. ¡No olvides traer tus palomitas y comentar en vivo con otros fanáticos!</p>
-      <p class="text-gray-300 mt-4">🗓 Fecha: 12 de Febrero, 2025 | 🕒 Hora: 7:00 PM (Hora del servidor)</p>
-    </div>
-
-    <div class="mt-8 bg-gray-700 p-6 rounded-lg shadow-lg">
-      <h3 class="text-xl font-semibold text-white">🎮 Torneo de Videojuegos</h3>
-      <p class="text-gray-300 mt-2">¡Demuestra tus habilidades en nuestros torneos! Participa en competiciones amistosas de *Super Smash Bros.*, *Among Us*, y más.</p>
-      <p class="text-gray-300 mt-4">🗓 Fecha: 14 de Febrero, 2025 | 🕒 Hora: 6:00 PM (Hora del servidor)</p>
-      <p class="text-gray-300 mt-2">🏆 Premios para los ganadores y roles especiales en el servidor.</p>
-    </div>
-
-    <div class="mt-8 bg-gray-700 p-6 rounded-lg shadow-lg">
-      <h3 class="text-xl font-semibold text-white">❓ Trivia de Anime y Videojuegos</h3>
-      <p class="text-gray-300 mt-2">Pon a prueba tus conocimientos sobre anime y videojuegos. ¡Vente a competir con otros miembros y gana premios increíbles!</p>
-      <p class="text-gray-300 mt-4">🗓 Fecha: 16 de Febrero, 2025 | 🕒 Hora: 5:00 PM (Hora del servidor)</p>
-    </div>
-
-    <div class="mt-8 bg-gray-700 p-6 rounded-lg shadow-lg">
-      <p class="text-gray-300 mt-2">Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo.</p>
+  <!-- Hero Section -->
+  <section class="relative h-[40vh] overflow-hidden">
+    <div class="absolute inset-0 bg-black/70 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 z-10"></div>
+    <img 
+      src="/placeholder.svg?height=500&width=1200&text=Eventos" 
+      alt="Eventos de OtakuPlayhub" 
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 text-center">
+        <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Eventos
+        </span>
+      </h1>
+      <p class="text-xl text-gray-200 max-w-2xl text-center">
+        ¡Únete a la comunidad y participa en nuestros increíbles eventos!
+      </p>
     </div>
   </section>
 
-  <section id="comentarios">
+  <!-- Welcome Section -->
+  <section class="py-12 bg-gray-900/50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-gray-800/80 rounded-xl p-8 shadow-lg border border-gray-700">
+        <h2 class="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+          ¡Bienvenido a los Eventos de la comunidad de OtakuPlayhub!
+        </h2>
+        <p class="text-gray-300 text-center text-lg mb-4">
+          Aquí encontrarás todos los eventos que estamos organizando. ¡Asegúrate de participar y disfrutar con otros miembros de la comunidad!
+        </p>
+        <div class="flex justify-center mt-6">
+          <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Ver calendario completo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="text-center py-10">
-        <h1 class="text-4xl font-bold">Comentarios</h1>
-      </section>
+  <!-- Events Filter -->
+  <section class="py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold text-white">Próximos Eventos</h2>
+        <div class="flex gap-3">
+          <select class="bg-gray-800 border border-gray-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="all">Todos los eventos</option>
+            <option value="anime">Anime</option>
+            <option value="games">Videojuegos</option>
+            <option value="trivia">Trivias</option>
+          </select>
+          <select class="bg-gray-800 border border-gray-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="upcoming">Próximos</option>
+            <option value="past">Pasados</option>
+          </select>
+        </div>
+      </div>
 
-    
- 
+      <!-- Event Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Event 1 -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all duration-300 hover:shadow-purple-500/20 hover:shadow-xl hover:scale-[1.02] group">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src={osamakefull.src || "/placeholder.svg"} 
+              alt="Maratón de Anime" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 m-2 rounded-full">
+              Anime
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">🎬 Maratón de Anime</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 mb-4">Únete a nuestro maratón de anime donde veremos juntos una selección de animes populares. ¡No olvides traer tus palomitas y comentar en vivo con otros fanáticos!</p>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>12 de Febrero, 2025</span>
+            </div>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>7:00 PM (Hora del servidor)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all duration-300 hover:shadow-purple-500/20 hover:shadow-xl hover:scale-[1.02] group">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src={NierAutomata.src || "/placeholder.svg"}
+              alt="Torneo de Videojuegos" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs font-bold px-3 py-1 m-2 rounded-full">
+              Gaming
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">🎮 Torneo de Videojuegos</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 mb-4">¡Demuestra tus habilidades en nuestros torneos! Participa en competiciones amistosas de <em>Super Smash Bros.</em>, <em>Among Us</em>, y más.</p>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>14 de Febrero, 2025</span>
+            </div>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>6:00 PM (Hora del servidor)</span>
+            </div>
+            <div class="flex items-center mb-4 text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+              <span>🏆 Premios para los ganadores</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all duration-300 hover:shadow-purple-500/20 hover:shadow-xl hover:scale-[1.02] group">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src={Construcion.src || "/placeholder.svg"} 
+              alt="Trivia de Anime y Videojuegos" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 m-2 rounded-full">
+              Trivia
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h3 class="text-xl font-bold text-white">❓ Trivia de Anime y Videojuegos</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 mb-4">Pon a prueba tus conocimientos sobre anime y videojuegos. ¡Vente a competir con otros miembros y gana premios increíbles!</p>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>16 de Febrero, 2025</span>
+            </div>
+            <div class="flex items-center mb-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>5:00 PM (Hora del servidor)</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="mt-10 bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-xl shadow-lg border border-gray-700">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">¿Tienes alguna pregunta?</h3>
+            <p class="text-gray-300">Si tienes alguna pregunta o sugerencia sobre los eventos, no dudes en ponerte en contacto con nosotros.</p>
+            <div class="mt-4 flex gap-3">
+              <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                Contactar
+              </button>
+              <button class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                Sugerir evento (proximamente)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Preview -->
+  <section class="py-12 bg-gray-900/50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-8 text-center">Calendario de Eventos</h2>
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 max-w-3xl mx-auto">
+        <div class="p-4 bg-gray-700 flex justify-between items-center">
+          <button class="text-gray-300 hover:text-white p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <h3 class="text-xl font-bold text-white">Febrero 2025</h3>
+          <button class="text-gray-300 hover:text-white p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <div class="grid grid-cols-7 text-center p-4 border-b border-gray-700">
+          <div class="text-gray-400 font-medium">Lun</div>
+          <div class="text-gray-400 font-medium">Mar</div>
+          <div class="text-gray-400 font-medium">Mié</div>
+          <div class="text-gray-400 font-medium">Jue</div>
+          <div class="text-gray-400 font-medium">Vie</div>
+          <div class="text-gray-400 font-medium">Sáb</div>
+          <div class="text-gray-400 font-medium">Dom</div>
+        </div>
+        <div class="grid grid-cols-7 gap-2 p-4">
+          {Array.from({ length: 28 }).map((_, i) => {
+            const day = i + 1;
+            const hasEvent = [12, 14, 16].includes(day);
+            return (
+              <div class={`aspect-square flex items-center justify-center rounded-full cursor-pointer transition-all duration-300 ${hasEvent ? 'bg-purple-600 text-white hover:bg-purple-700' : 'text-gray-300 hover:bg-gray-700'}`}>
+                {day}
+              </div>
+            );
+          })}
+        </div>
+        <div class="p-4 bg-gray-700/50 text-center">
+          <a href="#" class="text-purple-400 hover:text-purple-300 font-medium">Ver calendario completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commentarios Section -->
+  <section id="comentarios" class="py-12">
+   
+  </section>
+
+  <!-- Create Event -->
+  <section class="py-16 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">¿Quieres proponer un evento?</h2>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        ¿Tienes una idea para un evento en nuestra comunidad? ¡Compártela con nosotros! 
+        Estamos siempre abiertos a nuevas propuestas para hacer crecer nuestra comunidad.
+      </p>
+      <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 font-medium">
+        Proponer un evento (proximamente)
+      </button>
+    </div>
+  </section>
 </Layout>

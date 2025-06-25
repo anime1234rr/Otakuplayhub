@@ -3,6 +3,7 @@ const { title = "Otakuplahub" } = Astro.props;
 import Otakuplayhub from "../assets/Otakuplayhub.webp";
 
 ---
+<!-- el header y footer no deberian de estar aca no?-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +23,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
 <!-- Navegación -->
 <header class="sticky top-0 z-50 bg-[#0d1117] border-b border-gray-800 shadow-md">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <!-- Navegación para escritorio -->
+      <!-- Navegación de escritorio -->
       <nav class="flex items-center justify-between h-16 lg:h-20">
         <div class="flex items-center gap-3">
           <a href="/" title="Inicio" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
@@ -37,7 +38,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           </a>
         </div>
 
-        <!-- Menú de navegación para escritorio -->
+        <!-- Menú de navegación de escritorio -->
         <div class="hidden lg:flex lg:items-center lg:space-x-2">
           <a 
             href="/" 
@@ -51,18 +52,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           >
             Anime
           </a>
-          <a 
-            href="/Juegos" 
-            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
-          >
-            Juegos
-          </a>
-          <a 
-            href="/Musica" 
-            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
-          >
-            Música
-          </a>
+         
           <a 
             href="/Foro" 
             class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
@@ -81,9 +71,16 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           >
             Noticias
           </a>
+
+           <a 
+            href="/Recompensas" 
+            class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#1a2234] hover:text-blue-400"
+          >
+            Recompensas
+          </a>
         </div>
 
-        <!-- Acciones de usuario -->
+        <!-- Seccion usuario -->
         <div class="flex items-center gap-3">
           <!-- Discord -->
           <a 
@@ -137,18 +134,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           >
             Anime
           </a>
-          <a 
-            href="/Juegos" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
-          >
-            Juegos
-          </a>
-          <a 
-            href="/Musica" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
-          >
-            Música
-          </a>
+          
           <a 
             href="/Foro" 
             class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
@@ -281,28 +267,8 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
                 Anime
               </a>
             </li>
-            <li>
-              <a 
-                href="/Juegos" 
-                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                </svg>
-                Juegos
-              </a>
-            </li>
-            <li>
-              <a 
-                href="/Musica" 
-                class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                </svg>
-                Música
-              </a>
-            </li>
+         
+            
             <li>
               <a 
                 href="/Foro" 
@@ -335,6 +301,17 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
                 </svg>
                 Noticias
               </a>
+
+             <a 
+            href="/Recompensas" 
+          class="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
+            >
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+           </svg>
+            Recompensas
+           </a>
+
             </li>
           </ul>
         </div>
@@ -401,7 +378,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           </ul>
         </div>
 
-        <!-- Suscripción al boletín -->
+        <!-- Suscripción al boletín sin funcion-->
         <div>
           <h3 class="text-lg font-semibold mb-4 text-white">Mantente conectado</h3>
           <p class="text-gray-300 mb-4">Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones.</p>
@@ -419,7 +396,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
               type="submit" 
               class="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
-              Suscribirse
+              Suscribirse(sin funcion)
             </button>
           </form>
         </div>
