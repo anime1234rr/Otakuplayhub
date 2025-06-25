@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import EIGHTYSIXI from '../assets/EIGHTYSIXI.jpg';
-import charlottee from "../assets/charlottee.jpg"
-import KAKEGURUI from "../assets/KAKEGURUI.jpg"
-import shingeki from "../assets/shingeki.jpeg";
-import dateALive from "../assets/dateAlive.jpg";
-import GrandBlue from "../assets/grandBlue.jpg";
-import Kimetsu_no_Yaiba from "../assets/Kimetsu_no_Yaiba.jpg";
-import solo_leveling from "../assets/solo_leveling.jpg";
-import Dandadan from "../assets/dandadan.jpg";
+import P from '../assets/P.jpg';
+import R from "../assets/R.jpg"
+import D from "../assets/D.jpg"
+import L from "../assets/L.jpeg";
+import I from "../assets/I.jpg";
+import S from "../assets/S.jpg";
+import F from "../assets/F.jpg";
+import Ñ from "../assets/Ñ.jpg";
+import U from "../assets/U.jpg";
 
 
 // mucho codigo, pero de que sirve, una page mas?
@@ -18,7 +18,7 @@ const featuredAnime = [
   {
     id: 1,
     title: '86: Eighty-Six',
-    image: EIGHTYSIXI.src || "/placeholder.svg?height=500&width=1200",
+    image: P.src || "/placeholder.svg?height=500&width=1200",
     rating: 8.33,
     episodes: 26,
     genres: ['Acción', 'Fantasía', 'Histórico'],
@@ -27,7 +27,7 @@ const featuredAnime = [
   {
     id: 2,
     title: 'charlotte',
-    image: charlottee.src || "/placeholder.svg?height=500&width=1200",
+    image: R.src || "/placeholder.svg?height=500&width=1200",
     rating: 7.75,
     episodes: 13,
     genres: ['Drama'],
@@ -36,7 +36,7 @@ const featuredAnime = [
   {
     id: 3,
     title: 'Kakegurui',
-    image: KAKEGURUI.src || "/placeholder.svg?height=500&width=1200",
+    image: D.src || "/placeholder.svg?height=500&width=1200",
     rating: 7.22,
     episodes: 12,
     genres: ['Drama', 'Misterio', 'Suspenso'],
@@ -45,7 +45,7 @@ const featuredAnime = [
   {
     id: 4,
     title: 'Shingeki no Kyojin: Attack on Titan',
-    image:  shingeki.src || "/placeholder.svg?height=500&width=1200",
+    image:  L.src || "/placeholder.svg?height=500&width=1200",
     rating: 8.56,
     episodes: 25,
     genres: ['Super Poderes', 'Fantasia', 'Drama', 'Accion', 'Thriller', 'Isekai'],
@@ -54,7 +54,7 @@ const featuredAnime = [
   {
     id: 5,
     title: 'Date a Live',
-    image:  dateALive.src || "/placeholder.svg?height=500&width=1200",
+    image:  I.src || "/placeholder.svg?height=500&width=1200",
     rating: 7.14,
     episodes: 12,
     genres: ['Aventura', 'Fantasía', 'Comedia'],
@@ -63,7 +63,7 @@ const featuredAnime = [
   {
     id: 6,
     title: 'Grand Blue',
-    image: GrandBlue.src || "/placeholder.svg?height=500&width=1200",
+    image: S.src || "/placeholder.svg?height=500&width=1200",
     rating: 8.44,
     episodes: 12,
     genres: ['Comedia'],
@@ -73,10 +73,10 @@ const featuredAnime = [
 
 // Datos de ejemplo para temporadas
 const seasons = [
-  { id: 1, name: 'Invierno 2024', image: solo_leveling.src || "/placeholder.svg?height=500&width=1200", },
-  { id: 2, name: 'Otoño 2024', image: Dandadan.src || "/placeholder.svg?height=500&width=1200", },
-  { id: 3, name: 'Verano 2024',  image: Kimetsu_no_Yaiba.src || "/placeholder.svg?height=500&width=1200",},
-  { id: 4, name: 'Primavera 2024', image: Kimetsu_no_Yaiba.src || "/placeholder.svg?height=500&width=1200", }
+  { id: 1, name: 'Invierno 2024', image: Ñ.src || "/placeholder.svg?height=500&width=1200", },
+  { id: 2, name: 'Otoño 2024', image: U.src || "/placeholder.svg?height=500&width=1200", },
+  { id: 3, name: 'Verano 2024',  image: F.src || "/placeholder.svg?height=500&width=1200",},
+  { id: 4, name: 'Primavera 2024', image: F.src || "/placeholder.svg?height=500&width=1200", }
 ];
 
 // Datos de ejemplo para géneros
@@ -94,7 +94,7 @@ const genres = [
     <section class="relative h-[50vh] overflow-hidden">
       <div class="absolute inset-0 bg-black/60 z-10"></div>
       <Image 
-        src={EIGHTYSIXI} alt="Eighty Six" 
+        src={P} alt="Eighty Six" 
         alt="86: Eighty Six" 
         class="absolute inset-0 w-full h-full object-cover"
       />
