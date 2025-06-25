@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import eightySixImg from '../assets/eightySiximg.jpg';
 import charlottee from "../assets/charlottee.jpg"
 import Kakegurui from "../assets/kakegurui.jpg"
 import shingeki from "../assets/shingeki.jpeg";
@@ -9,7 +10,6 @@ import GrandBlue from "../assets/grandBlue.jpg";
 import Kimetsu_no_Yaiba from "../assets/Kimetsu_no_Yaiba.jpg";
 import solo_leveling from "../assets/solo_leveling.jpg";
 import Dandadan from "../assets/dandadan.jpg";
-import eightySixImg from "../assets/eightySiximg.jpg";
 
 
 // mucho codigo, pero de que sirve, una page mas?
@@ -18,7 +18,7 @@ const featuredAnime = [
   {
     id: 1,
     title: '86: Eighty-Six',
-    image: "/assets/eightySiximg.jpg || /placeholder.svg?height=500&width=1200",
+    image: eightySixImg.src || "/placeholder.svg?height=500&width=1200",
     rating: 8.33,
     episodes: 26,
     genres: ['Acción', 'Fantasía', 'Histórico'],
@@ -93,12 +93,11 @@ const genres = [
     <!-- Hero Section -->
     <section class="relative h-[50vh] overflow-hidden">
       <div class="absolute inset-0 bg-black/60 z-10"></div>
-<img
-  src="/assets/eightySiximg.jpg"
-  alt="86: Eighty Six"
-  class="absolute inset-0 w-full h-full object-cover"
-/>
-
+      <Image 
+        src={eightySixImg} alt="Eighty Six" 
+        alt="86: Eighty Six" 
+        class="absolute inset-0 w-full h-full object-cover"
+      />
       <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
           <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
