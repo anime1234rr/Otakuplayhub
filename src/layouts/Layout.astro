@@ -16,7 +16,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
 <body class="bg-gray-900 text-white">
 
 <!-- Navegación -->
-<header class="sticky top-0 z-50 bg-[#0d1117] border-b border-gray-800 shadow-md">
+<header class="sticky top-0 z-50 border-b border-gray-800 shadow-md" style="background-color: #141c2c !important;">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <!-- Navegación de escritorio -->
       <nav class="flex items-center justify-between h-16 lg:h-20">
@@ -93,8 +93,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
   <button 
     id="user-profile-button"
     title="Perfil de usuario" 
-    class="flex items-center gap-2 p-1 rounded-full transition-all duration-300 hover:bg-[#1a2234] focus:outline-none focus:ring-2 focus:ring-blue-500"
-  >
+    class="flex items-center gap-2 p-1 rounded-full transition-all duration-300 hover:bg-[#1a2234] focus:outline-none focus:ring-2 focus:ring-blue-500"  style="background-color: #141c2c !important;">
     <img 
       src={Otakuplayhub.src || "/placeholder.svg"} 
       class="w-9 h-9 rounded-full border-2 border-blue-500" 
@@ -106,13 +105,14 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
     </svg>
   </button>
 
-  <!-- Submenú del perfil expandido -->
+<!-- Submenú del perfil expandido -->
   <div 
     id="user-profile-menu"
-    class="absolute right-0 mt-2 w-80 bg-[#1a1a1a] border border-gray-700 rounded-lg shadow-xl opacity-0 invisible transform scale-95 transition-all duration-200 origin-top-right z-50 max-h-96 overflow-y-auto"
+    class="scroll-c absolute right-0 mt-2 w-80 bg-zinc-900 border border-gray-700 rounded-lg shadow-xl opacity-0 invisible transform scale-95 transition-all duration-200 origin-top-right z-50 max-h-96 overflow-y-auto"
+  style="background-color: #141c2c !important;"
   >
     <!-- Header del submenú -->
-    <div class="px-4 py-3 border-b border-gray-700 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+    <div class="px-4 py-3 border-b border-gray-700 bg-gradient-to-r from-blue-600 to-purple-600">
       <div class="flex items-center gap-3">
         <img 
           src={Otakuplayhub.src || "/placeholder.svg"} 
@@ -132,7 +132,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Básico</p>
       </div>
       
-      <a href="/perfil" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/perfil" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-blue-400">👤</span>
         <div>
           <div class="font-medium">Perfil</div>
@@ -141,7 +141,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
       </a>
 
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-red-400">❤️</span>
         <div>
           <div class="font-medium">Favoritos</div>
@@ -149,7 +149,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-yellow-400">🕓</span>
         <div>
           <div class="font-medium">Historial</div>
@@ -157,7 +157,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-purple-400">🔔</span>
         <div class="flex-1">
           <div class="font-medium">Notificaciones</div>
@@ -175,7 +175,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Avanzado</p>
       </div>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-yellow-400">🎖️</span>
         <div class="flex-1">
           <div class="font-medium">Recompensas</div>
@@ -183,7 +183,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-blue-400">📝</span>
         <div>
           <div class="font-medium">Mis Publicaciones</div>
@@ -191,7 +191,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-green-400">🧾</span>
         <div>
           <div class="font-medium">Mi Actividad</div>
@@ -199,7 +199,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-orange-400">📦</span>
         <div>
           <div class="font-medium">Mi Lista</div>
@@ -207,7 +207,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-pink-400">🎨</span>
         <div>
           <div class="font-medium">Apariencia</div>
@@ -215,7 +215,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-cyan-400">🗃️</span>
         <div>
           <div class="font-medium">Mis Archivos</div>
@@ -233,7 +233,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Extras</p>
       </div>
 
-      <a href="/estadisticas" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/estadisticas" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-emerald-400">📊</span>
         <div>
           <div class="font-medium">Estadísticas</div>
@@ -241,7 +241,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </a>
 
-      <button onclick="changeAvatar()" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200 w-full text-left">
+      <button onclick="changeAvatar()" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200 w-full text-left">
         <span class="text-violet-400">🔄</span>
         <div>
           <div class="font-medium">Cambiar Avatar</div>
@@ -249,7 +249,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         </div>
       </button>
 
-      <a href="/rango-otaku" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+      <a href="/rango-otaku" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-lg transition-colors duration-200">
         <span class="text-amber-400">🧙</span>
         <div>
           <div class="font-medium">Rango Otaku</div>
@@ -265,7 +265,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
     <div class="p-2">
       <button 
         onclick="logout()"
-        class="flex items-center gap-3 px-3 py-2 text-sm text-red-400 hover:bg-red-900/20 rounded-lg transition-colors duration-200 w-full text-left"
+        class="flex items-center gap-3 px-3 py-2 text-sm text-red-400 hover:bg-red-900 rounded-lg transition-colors duration-200 w-full text-left"
       >
         <span>🚪</span>
         <div>
@@ -280,7 +280,7 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
           <!-- Botón de menú móvil -->
           <button 
             id="mobile-menu-button" 
-            class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full bg-[#1a2234] hover:bg-blue-700 transition-colors duration-200"
+            class="lg:hidden flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 hover:bg-blue-700 transition-colors duration-200"
             aria-label="Abrir menú"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -295,38 +295,38 @@ import Otakuplayhub from "../assets/Otakuplayhub.jpg";
         <div class="grid grid-cols-2 gap-2 px-4">
           <a 
             href="/" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Inicio
           </a>
           <a 
             href="/Anime" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Anime
           </a>
           
           <a 
             href="/Foro" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Foro
           </a>
           <a 
             href="/Eventos" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Eventos
           </a>
           <a 
             href="/Noticias" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Noticias
           </a>
           <a 
             href="/Recompensas" 
-            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-blue-400 transition-all duration-200 text-center"
           >
             Recompensas
           </a>
