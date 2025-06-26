@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// mis propias actualizaciones, sin hacer un git desde el año pasado. mejor me lo guaardo para mi
+// toda las actualizaciones del sitio web, las cuales se muestran en la pagina de noticias
+// por favor no me borres esto, es la seccion de noticias que estoy haciendo para mi web, gracias
+// si quieres agregar una actualizacion, por favor sigue el formato de los objetos en el array
 const siteUpdates = [
 
 {
@@ -47,38 +49,27 @@ const siteUpdates = [
     ]
   }, 
 
+{
+    id: 4,
+    date: "13 de Mayo, 2024",
+    version: "v0.9.0",
+    title: "Nueva sección de Anime",
+    description: "Hemos lanzado la nueva sección de Anime.",
+    changes: [
+      { type: "new", text: "Nueva sección de Anime" },
+      { type: "improved", text: "Rediseño completo de Anime con nuevas categorías" },
+      { type: "fixed", text: "Corregido problema con la carga de imágenes en algunas páginas" }
+    ]
+  },
+
+  
+ 
+
 ];
 
-// no se que que iba a hacer con esto, pero lo dejo por si acaso
-const upcomingUpdates = [
-  {
-    title: "Implementación de un sistema de comentarios",
-    description: "Pronto podrás comentar y discutir sobre tus animes y mangas favoritos con otros usuarios.",
-  },
-  {
-    title: "Sistema de notificaciones",
-    description: "Implementaremos un sistema de notificaciones para mantenerte informado sobre actualizaciones y novedades.",
-  },
-  {
-    title: "Mejoras en la sección de eventos",
-    description: "Estamos trabajando en una sección de eventos más interactiva y con más funcionalidades.",
-  },
-  {
-    title: "Sistema de recompensas mejorado",
-    description: "Estamos mejorando nuestro sistema de recompensas para que puedas obtener más beneficios por tu participación.",
-  },
-  {
-    title: "Mejoras en la búsqueda",
-    description: "Implementaremos un sistema de búsqueda avanzada para encontrar contenido más fácilmente.",
-  },
-  {
-    title: "Sistema de perfiles de usuario personalizables",
-    description: "Estamos trabajando en un sistema para que puedas resgistrar y personalizar tus preferencias en la plataforma, de OtakuPlayhub en cualquier lugar.",
-  }
-];
 ---
 
-<Layout title="Noticias | OtakuPlayhub">
+<Layout title="Actualizaciones | OtakuPlayhub">
   <main class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
     <!--por favor no me borres esto, es la seccion de noticias que estoy haciendo para mi web, gracias-->
     <!-- Hero Section -->
@@ -88,12 +79,11 @@ const upcomingUpdates = [
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
             <span class="text-blue-500">
-              Actualizaciones de OtakuPlayhub
+              Noticias de OtakuPlayhub
             </span>
           </h1>
           <p class="text-xl text-gray-200 max-w-3xl mx-auto">
-            Mantente al día con los últimos cambios, mejoras y nuevas funcionalidades 
-            que estamos implementando en la plataforma.
+           Toda las actualizaciones que se han realizado en OtakuPlayhub, incluyendo actualizaciones de la sección de Anime, Noticias, Eventos, y Recompensas, así como actualizaciones de la sección de Foro.
           </p>
         </div>
       </div>
@@ -103,7 +93,7 @@ const upcomingUpdates = [
 <section class="py-12">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-white mb-8">Últimas actualizaciones</h2>
-   <div class="space-y-12">
+ <div class="space-y-12">
   {
     siteUpdates.map(update => {
       return (
@@ -190,105 +180,8 @@ const upcomingUpdates = [
     })
   }
 </div>
-    </div>
-</div>
-
   </div>
-
-    <!-- no se si el botón de "enviar sugerencia" funciona aun, pero lo dejo por si acaso. -->
-        <div class="mt-10 text-center">
-          
-            <a 
-              href="/Ver_Noticias" 
-              class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg transition-colors duration-300">
-              Ver más noticias
-            </a>
-        </div>
 </section>
 
-
-
-    <!-- Próximas actualizaciones -->
-    <section class="py-12 bg-gray-900">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-white mb-8">Próximamente</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {upcomingUpdates.map(update => (
-            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-colors duration-300">
-              <div class="p-6">
-                <div class="flex justify-between items-start mb-4">
-                  <h3 class="text-xl font-bold text-white">{update.title}</h3>
-                  <span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-600/20 text-blue-400">
-                    Próximamente
-                  </span>
-                </div>
-                <p class="text-gray-300">{update.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <!-- no se si el botón de "enviar sugerencia" funciona aun, pero lo dejo por si acaso. -->
-        <div class="mt-10 text-center">
-          <div class="inline-block bg-gray-800 rounded-lg p-6 max-w-2xl">
-            <h3 class="text-xl font-bold text-white mb-3">¿Tienes alguna sugerencia?</h3>
-            <p class="text-gray-300 mb-4">
-              Nos encantaría escuchar tus ideas para mejorar OtakuPlayhub. 
-              Comparte tus sugerencias y ayúdanos a crear la mejor plataforma para la comunidad.
-            </p>
-            <a 
-              href="/contacto" 
-              class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg transition-colors duration-300">
-              Enviar sugerencia
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- no se porque hice esta sección, debi borralo, pero no lo borre, porque no se si es necesario. -->
-    <!-- Preguntas frecuentes -->
-    <section class="py-12">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-white mb-8">Preguntas Frecuentes</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div class="bg-gray-800 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-3">¿Con qué frecuencia se actualiza OtakuPlayhub?</h3>
-            <p class="text-gray-300">
-              Lanzamos actualizaciones importantes aproximadamente una vez al mes, 
-              con correcciones menores y mejoras que se implementan semanalmente.
-            </p>
-          </div>
-          
-          <div class="bg-gray-800 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-3">¿Cómo puedo reportar un error?</h3>
-            <p class="text-gray-300">
-              Puedes reportar errores a través de nuestro 
-              <a href="/contacto" class="text-blue-400 hover:text-blue-300">formulario de contacto</a> 
-              o directamente en nuestro <a href="/foro" class="text-blue-400 hover:text-blue-300">foro de soporte</a>.
-            </p>
-          </div>
-          
-          <div class="bg-gray-800 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-3">¿Las actualizaciones afectan mis datos?</h3>
-            <p class="text-gray-300">
-              No, tus datos personales, comentarios y contenido guardado permanecen 
-              intactos durante las actualizaciones del sitio.
-            </p>
-          </div>
-          
-          <div class="bg-gray-800 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-3">¿Puedo probar nuevas funciones antes de su lanzamiento?</h3>
-            <p class="text-gray-300">
-              Sí, ocasionalmente invitamos a usuarios a probar nuevas funciones en fase beta. 
-              Mantente atento a las invitaciones o únete a nuestro 
-              <a href="/programa-beta" class="text-blue-400 hover:text-blue-300">programa de pruebas</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 </Layout>
