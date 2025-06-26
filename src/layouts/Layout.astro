@@ -1,9 +1,7 @@
 ---
 const { title = "Otakuplahub" } = Astro.props;
-import Otakuplayhub from "../assets/Otakuplayhub.webp";
-
+import Otakuplayhub from "../assets/Otakuplayhub.jpg";
 ---
-<!-- el header y footer no deberian de estar aca no?-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -16,9 +14,6 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
   <script src="https://kit.fontawesome.com/f1cbaca1e1.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-900 text-white">
-
-
-  
 
 <!-- Navegación -->
 <header class="sticky top-0 z-50 bg-[#0d1117] border-b border-gray-800 shadow-md">
@@ -93,18 +88,194 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
             <i class="fab fa-discord text-white"></i>
           </a>
           
-          <!-- Perfil de usuario -->
-          <a 
-            href="/" 
-            title="Perfil de usuario" 
-            class="flex items-center justify-center transition-transform duration-300 hover:scale-105"
-          >
-            <img 
-              src={Otakuplayhub.src || "/placeholder.svg"} 
-              class="w-9 h-9 rounded-full border-2 border-blue-500" 
-              alt="Perfil de usuario" 
-            />
-          </a>
+          <!-- Perfil de usuario con submenú -->
+          <div class="relative" id="user-profile-dropdown">
+  <button 
+    id="user-profile-button"
+    title="Perfil de usuario" 
+    class="flex items-center gap-2 p-1 rounded-full transition-all duration-300 hover:bg-[#1a2234] focus:outline-none focus:ring-2 focus:ring-blue-500"
+  >
+    <img 
+      src={Otakuplayhub.src || "/placeholder.svg"} 
+      class="w-9 h-9 rounded-full border-2 border-blue-500" 
+      alt="Perfil de usuario" 
+    />
+    <!-- Flecha indicadora -->
+    <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+
+  <!-- Submenú del perfil expandido -->
+  <div 
+    id="user-profile-menu"
+    class="absolute right-0 mt-2 w-80 bg-[#1a1a1a] border border-gray-700 rounded-lg shadow-xl opacity-0 invisible transform scale-95 transition-all duration-200 origin-top-right z-50 max-h-96 overflow-y-auto"
+  >
+    <!-- Header del submenú -->
+    <div class="px-4 py-3 border-b border-gray-700 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+      <div class="flex items-center gap-3">
+        <img 
+          src={Otakuplayhub.src || "/placeholder.svg"} 
+          class="w-10 h-10 rounded-full border-2 border-blue-500" 
+          alt="Avatar del usuario" 
+        />
+        <div>
+          <p class="text-sm font-bold text-white">DORY~</p>
+          <p class="text-xs text-blue-300">Sin resgistrar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opciones básicas -->
+    <div class="p-2">
+      <div class="mb-2">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Básico</p>
+      </div>
+      
+      <a href="/perfil" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-blue-400">👤</span>
+        <div>
+          <div class="font-medium">Perfil</div>
+          <div class="text-xs text-gray-500">Ver perfil público</div>
+        </div>
+      </a>
+
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-red-400">❤️</span>
+        <div>
+          <div class="font-medium">Favoritos</div>
+          <div class="text-xs text-gray-500">Animes y posts guardados</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-yellow-400">🕓</span>
+        <div>
+          <div class="font-medium">Historial</div>
+          <div class="text-xs text-gray-500">Actividad reciente</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-purple-400">🔔</span>
+        <div class="flex-1">
+          <div class="font-medium">Notificaciones</div>
+          <div class="text-xs text-gray-500">Menciones y comentarios</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Separador -->
+    <div class="border-t border-gray-700 mx-2"></div>
+
+    <!-- Opciones avanzadas -->
+    <div class="p-2">
+      <div class="mb-2">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Avanzado</p>
+      </div>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-yellow-400">🎖️</span>
+        <div class="flex-1">
+          <div class="font-medium">Recompensas</div>
+          <div class="text-xs text-gray-500">Logros y medallas</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-blue-400">📝</span>
+        <div>
+          <div class="font-medium">Mis Publicaciones</div>
+          <div class="text-xs text-gray-500">Posts y comentarios</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-green-400">🧾</span>
+        <div>
+          <div class="font-medium">Mi Actividad</div>
+          <div class="text-xs text-gray-500">Resumen de participación</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-orange-400">📦</span>
+        <div>
+          <div class="font-medium">Mi Lista</div>
+          <div class="text-xs text-gray-500">Plan de ver/leer</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-pink-400">🎨</span>
+        <div>
+          <div class="font-medium">Apariencia</div>
+          <div class="text-xs text-gray-500">Temas y colores</div>
+        </div>
+      </a>
+
+      <a href="/" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-cyan-400">🗃️</span>
+        <div>
+          <div class="font-medium">Mis Archivos</div>
+          <div class="text-xs text-gray-500">Biblioteca personal</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Separador -->
+    <div class="border-t border-gray-700 mx-2"></div>
+
+    <!-- Opciones divertidas -->
+    <div class="p-2">
+      <div class="mb-2">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide px-2 py-1">Extras</p>
+      </div>
+
+      <a href="/estadisticas" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-emerald-400">📊</span>
+        <div>
+          <div class="font-medium">Estadísticas</div>
+          <div class="text-xs text-gray-500">Tu actividad en números</div>
+        </div>
+      </a>
+
+      <button onclick="changeAvatar()" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200 w-full text-left">
+        <span class="text-violet-400">🔄</span>
+        <div>
+          <div class="font-medium">Cambiar Avatar</div>
+          <div class="text-xs text-gray-500">Actualización rápida</div>
+        </div>
+      </button>
+
+      <a href="/rango-otaku" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:bg-[#2d2d2d] rounded-lg transition-colors duration-200">
+        <span class="text-amber-400">🧙</span>
+        <div>
+          <div class="font-medium">Rango Otaku</div>
+          <div class="text-xs text-gray-500">Títulos desbloqueables</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Separador -->
+    <div class="border-t border-gray-700 mx-2"></div>
+
+    <!-- Cerrar sesión -->
+    <div class="p-2">
+      <button 
+        onclick="logout()"
+        class="flex items-center gap-3 px-3 py-2 text-sm text-red-400 hover:bg-red-900/20 rounded-lg transition-colors duration-200 w-full text-left"
+      >
+        <span>🚪</span>
+        <div>
+          <div class="font-medium">Cerrar Sesión</div>
+          <div class="text-xs text-red-300">Salir de la cuenta</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
           
           <!-- Botón de menú móvil -->
           <button 
@@ -153,6 +324,12 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           >
             Noticias
           </a>
+          <a 
+            href="/Recompensas" 
+            class="py-2 px-3 text-sm font-medium rounded-lg bg-[#161b22] hover:bg-[#1a2234] hover:text-blue-400 transition-all duration-200 text-center"
+          >
+            Recompensas
+          </a>
         </div>
       </div>
     </div>
@@ -161,7 +338,6 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
   <main class="container mx-auto p-4">
     <slot /> 
   </main>
-
 
 <!-- Pie de página -->
 <footer class="bg-[#111827] border-t border-gray-800 pt-12 pb-8">
@@ -401,10 +577,24 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
     </div>
   </footer>
 
-  <!-- Script para el menú móvil -->
+  <!-- Scripts -->
   <script>
-    // Toggle para el menú móvil
+    // Extiende la interfaz Window para TypeScript
+    declare global {
+      interface Window {
+        closeDropdown?: () => void;
+      }
+    }
+
+    // Añadir declaración global para TypeScript
+    /** @type {any} */
+    window;
+
+    /** @type {Window & typeof globalThis & { closeDropdown?: () => void }} */
+    const win = window;
+
     document.addEventListener('DOMContentLoaded', function() {
+      // Toggle para el menú móvil
       const menuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       
@@ -413,12 +603,121 @@ import Otakuplayhub from "../assets/Otakuplayhub.webp";
           mobileMenu.classList.toggle('hidden');
         });
       }
+
+      // Dropdown del perfil de usuario
+      const profileButton = document.getElementById('user-profile-button');
+      const profileMenu = document.getElementById('user-profile-menu');
+      const dropdownArrow = document.getElementById('dropdown-arrow');
+      
+      if (profileButton && profileMenu) {
+
+        profileButton.addEventListener('click', function(e) {
+          e.stopPropagation();
+          toggleDropdown();
+        });
+
+
+        document.addEventListener('click', function(e) {
+          const dropdown = document.getElementById('user-profile-dropdown');
+          if (dropdown && !dropdown.contains(e.target as Node)) {
+            closeDropdown();
+          }
+        });
+
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeDropdown();
+          }
+        });
+
+        function toggleDropdown() {
+          if (!profileMenu) return;
+          const isVisible = !profileMenu.classList.contains('opacity-0');
+          
+          if (isVisible) {
+            closeDropdown();
+          } else {
+            openDropdown();
+          }
+        }
+
+        function openDropdown() {
+          if (!profileMenu) return;
+          profileMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+          profileMenu.classList.add('opacity-100', 'visible', 'scale-100');
+        }
+
+        function closeDropdown() {
+          if (!profileMenu) return;
+          profileMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+          profileMenu.classList.remove('opacity-100', 'visible', 'scale-100');
+        }
+
+        window.closeDropdown = closeDropdown;
+      }
     });
+
+
+    function logout() {
+      if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
+
+        alert('Cerrando sesión...');
+
+      }
+    }
+
+    function changeAvatar() {
+      const avatars = [
+        '/placeholder.svg?height=100&width=100&text=🎌',
+        '/placeholder.svg?height=100&width=100&text=🎮',
+        '/placeholder.svg?height=100&width=100&text=⚡',
+        '/placeholder.svg?height=100&width=100&text=🔥',
+        '/placeholder.svg?height=100&width=100&text=💫'
+      ];
+      
+      const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+      const avatarElements = document.querySelectorAll('img[alt*="usuario"], img[alt*="Avatar"]');
+      
+      avatarElements.forEach(img => {
+        (img as HTMLImageElement).src = randomAvatar;
+      });
+      
+      // Mostrar notificación
+      showNotification('¡Avatar actualizado!', 'success');
+      
+      // Cerrar dropdown
+      if (typeof window.closeDropdown === 'function') {
+        window.closeDropdown();
+      }
+    }
+
+    // Función para mostrar notificaciones
+    /**
+     * Muestra una notificación en pantalla.
+     * @param {string} message - El mensaje a mostrar.
+     * @param {string} [type='info'] - El tipo de notificación ('success', 'error', 'info').
+     */
+    function showNotification(message: string, type: string = 'info') {
+      const notification = document.createElement('div');
+      notification.className = `fixed top-4 right-4 p-4 rounded-lg text-white z-50 transition-all duration-300 ${
+        type === 'success' ? 'bg-green-500' : 
+        type === 'error' ? 'bg-red-500' : 
+        'bg-blue-500'
+      }`;
+      notification.textContent = message;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => {
+          if (document.body.contains(notification)) {
+            document.body.removeChild(notification);
+          }
+        }, 300);
+      }, 3000);
+    }
   </script>
 </body>
 </html>
-
-
-</body>
-</html>
-

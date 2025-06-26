@@ -4,48 +4,44 @@ import Layout from '../layouts/Layout.astro';
 // mis propias actualizaciones, sin hacer un git desde el año pasado. mejor me lo guaardo para mi
 const siteUpdates = [
 
-{
-  id: 1,
-  date: "26 de junio, 2025",
-  version: "v1.0.2",
-  title: "¡Mejoras generales en Noticias, Contacto, Eventos e Inicio!",
-  description: "Hemos actualizado las secciones importantes como Eventos, Noticias y Recompensas. Se ha corregido un problema con el degradado del título de Noticias y se ha creado un canal para ver todas sus actualizaciones. También se solucionó un error en el formulario de suscripción donde el texto aparecía siempre en blanco al escribir.",
-  changes: [
-    
-    { type: "fixed", text: "El texto del campo de correo y contacto ahora se muestra correctamente al escribir" },
-    { type: "fixed", text: "Corregido el estilo degradado del título en la sección de Noticias" },
-    { type: "added", text: "Canal de Ver noticias se creado para centralizar actualizaciones del sitio" },
-    { type: "in-progress", text: "La sección de Foro sigue en desarrollo" }
-  ]
-},
-
-
-{
-  id: 2,
-  date: "25 de junio, 2025",
-  version: "v1.0.1",
-  title: "¡Nueva sección de Anime y mejoras generales!",
-  description: "Hemos lanzado la nueva sección de Anime y actualizado otras áreas importantes como Eventos, Noticias y Recompensas. Aún estamos trabajando en la sección de Foro, y la sección de Juegos ha sido retirada temporalmente.",
-  changes: [
-    { type: "new", text: "Secciones nuevas: Anime, Eventos, Noticias y Recompensas" },
-    { type: "improved", text: "Rediseño completo del apartado de Anime con nuevas categorías y filtros" },
-    { type: "fixed", text: "Corregido problema con la carga de imágenes en algunas páginas" },
-    { type: "removed", text: "Se eliminó la sección de Juegos por falta de funcionalidad en esta etapa" },
-    { type: "planned", text: "Se planea implementar un Foro con base de datos para interacción entre usuarios" }
-  ]
-},
-
-    {
-    id: 3,
-    date: "13 de Mayo, 2025",
-    version: "v1.0.0",
-    title: "la sección de Juegos ha sido eliminada temporalmente",
-    description: "hemos decidido eliminar la sección de Juegos para mejorarlo y volver a implementarlo, Nuevamente .",
-    changes: [
-      { type: "fixed", text: "Corregidos problemas de visualización en las imagenes" },
-      { type: "removed", text: "Se eliminó la sección de Juegos por falta de funcionalidad en esta etapa" },
+ {
+    "id": 1,
+    "date": "26 de junio, 2025",
+    "version": "v1.0.3",
+    "title": "¡Integración inicial del perfil de usuario!",
+    "description": "Hemos dado un gran paso adelante con la integración de la nueva sección de perfil. Aunque algunas funciones aún están en desarrollo, ya puedes ver y explorar las opciones básicas. Además, se han realizado correcciones generales.",
+    "changes": [
+      { "type": "added", "text": "Se ha integrado la nueva sección de Perfil." },
+      { "type": "in-progress", "text": "Algunas funcionalidades del perfil aún no están activas, se irán integrando en futuras actualizaciones." }
     ]
-  }, 
+  },
+  {
+    "id": 2,
+    "date": "26 de junio, 2025",
+    "version": "v1.0.2",
+    "title": "¡Mejoras generales en Noticias, Contacto, Eventos e Inicio!",
+    "description": "Hemos actualizado las secciones importantes como Eventos, Noticias y Recompensas. Se ha corregido un problema con el degradado del título de Noticias y se ha creado un canal para ver todas sus actualizaciones. También se solucionó un error en el formulario de suscripción donde el texto aparecía siempre en blanco al escribir.",
+    "changes": [
+      { "type": "fixed", "text": "El texto del campo de correo y contacto ahora se muestra correctamente al escribir." },
+      { "type": "fixed", "text": "Corregido el estilo degradado del título en la sección de Noticias." },
+      { "type": "added", "text": "Canal de 'Ver noticias' creado para centralizar actualizaciones del sitio." },
+      { "type": "in-progress", "text": "La sección de Foro sigue en desarrollo." }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "25 de junio, 2025",
+    "version": "v1.0.1",
+    "title": "¡Nueva sección de Anime y mejoras generales!",
+    "description": "Hemos lanzado la nueva sección de Anime y actualizado otras áreas importantes como Eventos, Noticias y Recompensas. Aún estamos trabajando en la sección de Foro, y la sección de Juegos ha sido retirada temporalmente.",
+    "changes": [
+      { "type": "new", "text": "Secciones nuevas: Anime, Eventos, Noticias y Recompensas." },
+      { "type": "improved", "text": "Rediseño completo del apartado de Anime con nuevas categorías y filtros." },
+      { "type": "fixed", "text": "Corregido problema con la carga de imágenes en algunas páginas." },
+      { "type": "removed", "text": "Se eliminó la sección de Juegos por falta de funcionalidad en esta etapa." },
+      { "type": "planned", "text": "Se planea implementar un Foro con base de datos para interacción entre usuarios." }
+    ]
+  },
 
 ];
 

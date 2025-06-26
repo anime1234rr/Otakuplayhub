@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Mis Estadísticas - OtakuPlayhub">
+  <main class="min-h-screen bg-[#1e2532] py-8">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h1 class="text-3xl font-bold text-white mb-8">📊 Mis Estadísticas</h1>
+
+      <!-- Resumen general -->
+      <div class="grid md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-gradient-to-r from-blue-600/20 to-blue-800/20 border border-blue-500/30 rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold text-blue-400">0</div>
+          <div class="text-blue-200">Animes Vistos</div>
+          <div class="text-xs text-gray-400 mt-1">0 este mes</div>
+        </div>
+        <div class="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold text-purple-400">0</div>
+          <div class="text-purple-200">Episodios</div>
+          <div class="text-xs text-gray-400 mt-1">0 días</div>
+        </div>
+        <div class="bg-gradient-to-r from-green-600/20 to-green-800/20 border border-green-500/30 rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold text-green-400">0</div>
+          <div class="text-green-200">Posts Creados</div>
+          <div class="text-xs text-gray-400 mt-1">0 esta semana</div>
+        </div>
+        <div class="bg-gradient-to-r from-yellow-600/20 to-yellow-800/20 border border-yellow-500/30 rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold text-yellow-400">0</div>
+          <div class="text-yellow-200">Puntos Totales</div>
+          <div class="text-xs text-gray-400 mt-1">Nivel 0</div>
+        </div>
+      </div>
+
+      <!-- Gráficos y detalles -->
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Géneros favoritos -->
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6">
+          <h2 class="text-xl font-bold text-white mb-4">🎭 Géneros Favoritos</h2>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-300">Acción</span>
+              <div class="flex items-center gap-2">
+                <div class="w-32 bg-slate-700 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 1%"></div>
+                </div>
+                <span class="text-sm text-gray-400">0</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-300">Drama</span>
+              <div class="flex items-center gap-2">
+                <div class="w-32 bg-slate-700 rounded-full h-2">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 1%"></div>
+                </div>
+                <span class="text-sm text-gray-400">0</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-300">Comedia</span>
+              <div class="flex items-center gap-2">
+                <div class="w-32 bg-slate-700 rounded-full h-2">
+                  <div class="bg-green-500 h-2 rounded-full" style="width: 1%"></div>
+                </div>
+                <span class="text-sm text-gray-400">0</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-300">Romance</span>
+              <div class="flex items-center gap-2">
+                <div class="w-32 bg-slate-700 rounded-full h-2">
+                  <div class="bg-pink-500 h-2 rounded-full" style="width: 1%"></div>
+                </div>
+                <span class="text-sm text-gray-400">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actividad mensual -->
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6">
+          <h2 class="text-xl font-bold text-white mb-4">📈 Actividad Mensual</h2>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <div>
+                <div class="text-white font-medium">Enero 2025</div>
+                <div class="text-gray-400 text-sm">0 animes completados</div>
+              </div>
+              <div class="text-blue-400 font-bold">0 pts</div>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <div>
+                <div class="text-white font-medium">Diciembre 2024</div>
+                <div class="text-gray-400 text-sm">0 animes completados</div>
+              </div>
+              <div class="text-blue-400 font-bold">0 pts</div>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <div>
+                <div class="text-white font-medium">Noviembre 2024</div>
+                <div class="text-gray-400 text-sm">0 animes completados</div>
+              </div>
+              <div class="text-blue-400 font-bold">0 pts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logros recientes -->
+      <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 mt-6">
+        <h2 class="text-xl font-bold text-white mb-4">🏆 Logros Recientes</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-lg border border-yellow-500/30">
+            <span class="text-2xl">🎖️</span>
+            <div>
+              <div class="text-white font-medium">Maratonista</div>
+              <div class="text-gray-300 text-sm">Viste 0 animes en un mes</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg border border-blue-500/30">
+            <span class="text-2xl">💬</span>
+            <div>
+              <div class="text-white font-medium">Comentarista</div>
+              <div class="text-gray-300 text-sm">0 comentarios realizados</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg border border-purple-500/30">
+            <span class="text-2xl">⭐</span>
+            <div>
+              <div class="text-white font-medium">Crítico</div>
+              <div class="text-gray-300 text-sm">0 calificaciones dadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
